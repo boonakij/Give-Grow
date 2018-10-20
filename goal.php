@@ -23,12 +23,12 @@ include('includes/init.php');
 
   <h1> 2. Set a Charitable Giving Goal </h1>
 
-<div class = "selectbar">
-<label for="annual" class = "option" id = "annuallabel">Annual</label>
-<input type="radio" id="annual" name="annual">
-<label for="weekly" class = "option" id = "weeklylabel">Weekly</label>
-<input type="radio" id="weekly" name="weekly">
-</div>
+  <div class = "selectbar">
+    <label for="annual" class = "option" id = "annuallabel">Annual</label>
+    <input type="radio" id="annual" name="annual">
+    <label for="weekly" class = "option" id = "weeklylabel">Weekly</label>
+    <input type="radio" id="weekly" name="weekly">
+  </div>
 
   <?php
   if (!$current_user) {
@@ -48,13 +48,15 @@ include('includes/init.php');
   }
   ?>
   <div class="slidecontainer">
-  <input type="range" min="1" max="20" value="10" class="slider" id="slider">
-  <p>Percentage: <div id="sliderAmount"></div></p>
+    <input type="range" min="1" max="20" value="10" class="slider" id="slider">
+    <p>Percentage: <div id="sliderAmount"></div></p>
   </div>
 
-<p> That's </p>
-<div id = "calculatedamt"> </div>
-<p> each day! </p>
-  <p> 1 - <strong> 2 </strong></p>
-</body>
-</html>
+  <p> That's </p>
+  <div id = "calculatedamt"> </div>
+  <p> each day! </p>
+
+  <a href = "dashboard.php"> All Set! </a>
+    <p> 1 - <strong> 2 </strong></p>
+  </body>
+  </html>
