@@ -1,6 +1,8 @@
 <?php
 ini_set('error_reporting', E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED);
+// ini_set("allow_url_fopen", 1);
 include('includes/init.php');
+// echo phpInfo();
 ?>
 <!DOCTYPE html>
 <html>
