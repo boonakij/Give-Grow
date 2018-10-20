@@ -42,16 +42,15 @@ include('includes/init.php');
               ':id' => $user_finance['id']
             );
   $results = exec_sql_query($db, $sql, $params);
-
-  
-  // $sql = "SELECT * FROM users_finance WHERE users_id = :user_id AND class_id = :class_id AND user_id = :user_id AND semester_id = :semester_id;";
-  // $params = array(
-  //             ':plan_id' => $plan_id,
-  //             ':class_id' => $id,
-  //             ':user_id' => get_user_id(),
-  //             ':semester_id' => $semester_id
-  //           );
-  // $results = exec_sql_query($db, $sql, $params)->fetchAll(PDO::FETCH_COLUMN, 0)[0];
+?>
+With $<?php echo $new_donation_fund ?>, you could:
+<?php
+  $sql = "SELECT * FROM offerings;";
+  $params = array(
+              // ':user_id' => get_user_id()
+            );
+  $offering = exec_sql_query($db, $sql, $params)->fetchAll()[0];
+  echo str_replace("_count", round($new_donation_fund/$offering['cost'], 1), $offering['desc']);
 ?>
 </body>
 </html>

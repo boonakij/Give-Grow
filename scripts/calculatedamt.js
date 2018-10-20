@@ -19,14 +19,13 @@ $(document).ready(function() {
 
   annual.onclick = function() {
     var annual = document.getElementById("annual");
-    var annuallabel = documnet.getElementById("annuallabel");
-    alert("hi")
+    var annuallabel = document.getElementById("annuallabel");
     annuallabel.classList.add("selected");
   }
 
   weeklylabel.onclick = function () {
     var weekly = document.getElementById("weekly");
-    var weeklylabel = documnet.getElementById("weeklylabel");
+    var weeklylabel = document.getElementById("weeklylabel");
     weekly.classList.add("selected");
   }
 
