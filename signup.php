@@ -15,7 +15,7 @@ include('includes/init.php');
   <script src="scripts/activity.js" type="text/javascript"></script>
   <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 
-  <title>Share Here- Sign In</title>
+  <title>Share Here- Sign Up</title>
 </head>
 
 <body>
@@ -51,6 +51,5 @@ include('includes/init.php');
     <?php
   }
   ?>
-<p> Don't have an account? Click <a href="signup.php"> here </a> to sign up now! </p>
 </body>
 </html>
