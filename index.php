@@ -25,29 +25,6 @@ include('includes/init.php');
   <h1> ShareEarn </h1>
   <p class = "slogan"> Envision what you can do for a better future for anyone. </p>
 
-<<<<<<< HEAD
-<form action="index.php" method="post">
-  <input type="text" name="username" placeholder="Username" required>
-  <input type="password" name="password" placeholder="Password" required>
-  <input type="submit" name="login" value="Log in">
-</form>
-<?php
-// API stuff not working
-// $json = file_get_contents('api.reimaginebanking.com/atms?key=08e6e06dd920cc34e0af881bc558d6a3');
-// echo "hi";
-// echo $json;
-// $obj = json_decode($json);
-// echo $obj->access_token;
-}
-else {
-?>
-<form action="index.php" method="post" id="logout-form">
-  <input type="submit" name="logout" value="Log out" id="logout-btn">
-</form>
-<?php
-}
-?>
-=======
   <?php
   if (!$current_user) {
     ?>
@@ -79,4 +56,3 @@ else {
 <p> Don't have an account? Click <a href="signup.php"> here </a> to sign up now! </p>
 </body>
 </html>
->>>>>>> a2c6c36994036dd7050f3f9775bcbbecc9dc75e2
