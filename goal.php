@@ -22,13 +22,12 @@ include('includes/init.php');
 <body>
 
   <h1> 2. Set a Charitable Giving Goal </h1>
-<div class = "option selectbar">
-  <div class = "annual">
-    <p> Annual </p>
-  </div>
-  <div class = "option weekly">
-    <p> Weekly </p>
-  </div>
+
+<div class = "selectbar">
+<label for="annual" class = "option" id = "annuallabel">Annual</label>
+<input type="radio" id="annual" name="annual">
+<label for="weekly" class = "option" id = "weeklylabel">Weekly</label>
+<input type="radio" id="weekly" name="weekly">
 </div>
 
   <?php
@@ -49,12 +48,12 @@ include('includes/init.php');
   }
   ?>
   <div class="slidecontainer">
-  <input type="range" min="1" max="100" value="50" class="slider" id="slider">
+  <input type="range" min="1" max="20" value="10" class="slider" id="slider">
   <p>Percentage: <div id="sliderAmount"></div></p>
   </div>
 
 <p> That's </p>
-<p id = "calculatedamt"> </p>
+<div id = "calculatedamt"> </div>
 <p> each day! </p>
   <p> 1 - <strong> 2 </strong></p>
 </body>

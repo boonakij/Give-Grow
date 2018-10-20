@@ -1,16 +1,33 @@
 $(document).ready(function() {
-  alert("hi");
   var output = document.getElementById("sliderAmount");
   output.innerHTML = slider.value;
+  var income = document.getElementById("income");
 
-  slider.onchange = function() {
+  slider.oninput = function() {
     var slider = document.getElementById("slider");
     var output = document.getElementById("sliderAmount");
     output.innerHTML = this.value;
+    var calculatedamt = document.getElementById("calculatedamt")
+    calculatedamt.innerHTML = Math.round(income.value*this.value/365)/100;
   }
 
-  slider.onchange = function() {
+  income.oninput = function() {
     var income = document.getElementById("income");
-    calculatedamt.innerHTML = income*this.value*.001/365;
+    var calculatedamt = document.getElementById("calculatedamt")
+    calculatedamt.innerHTML = Math.round(this.value*slider.value/365)/100;
   }
+
+  annual.onclick = function() {
+    var annual = document.getElementById("annual");
+    var annuallabel = documnet.getElementById("annuallabel");
+    alert("hi")
+    annuallabel.classList.add("selected");
+  }
+
+  weeklylabel.onclick = function () {
+    var weekly = document.getElementById("weekly");
+    var weeklylabel = documnet.getElementById("weeklylabel");
+    weekly.classList.add("selected");
+  }
+
 });
