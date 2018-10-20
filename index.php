@@ -27,17 +27,9 @@ include('includes/init.php');
   if (!$current_user) {
     ?>
     <form action="index.php" method="post">
-      <label for = "username" ckass = "title"> Username: </label>
+      <label for = "username" class = "title"> Username: </label>
       <input type="text" name="username" placeholder="Username" required>
       <label for = "password" ckass = "title"> Password: </label>
-      <input type="password" name="password" placeholder="Password" required>
-      <label for = "email" class = "title"> Email: </label>
-      <input type="text" name="email" placeholder="Email" required>
-      <input type="submit" name="create" value="Get started">
-    </form>
-
-    <form action="index.php" method="post">
-      <input type="text" name="username" placeholder="Username" required>
       <input type="password" name="password" placeholder="Password" required>
       <input type="submit" name="login" value="Log in">
     </form>
@@ -51,6 +43,6 @@ include('includes/init.php');
     <?php
   }
   ?>
-<p> Don't have an account? Click <a href="signup.php"> here </a> to sign up now! </p>
+  <p> Don't have an account? Click <a href="signup.php"> here </a> to sign up now! </p>
 </body>
 </html>
