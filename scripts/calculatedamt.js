@@ -17,16 +17,21 @@ $(document).ready(function() {
     calculatedamt.innerHTML = Math.round(this.value*slider.value/365)/100;
   }
 
-  annual.onclick = function() {
-    var annual = document.getElementById("annual");
-    var annuallabel = document.getElementById("annuallabel");
-    annuallabel.classList.add("selected");
-  }
+  $("#annual").click(function(){
+    $("#annuallabel").addClass("selected");
+    $("#weeklylabel").removeClass("selected");
+  });
 
-  weeklylabel.onclick = function () {
-    var weekly = document.getElementById("weekly");
-    var weeklylabel = document.getElementById("weeklylabel");
-    weekly.classList.add("selected");
-  }
+
+  $("#weekly").click(function(){
+    $("#annuallabel").removeClass("selected");
+    $("#weeklylabel").addClass("selected");
+  });
+
+  // weeklylabel.onclick = function () {
+  //   var weekly = document.getElementById("weekly");
+  //   var weeklylabel = document.getElementById("weeklylabel");
+  //   weekly.classList.add("selected");
+  // }
 
 });
