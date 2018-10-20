@@ -42,6 +42,8 @@ include('includes/init.php');
               ':id' => $user_finance['id']
             );
   $results = exec_sql_query($db, $sql, $params);
+
+  
   // $sql = "SELECT * FROM users_finance WHERE users_id = :user_id AND class_id = :class_id AND user_id = :user_id AND semester_id = :semester_id;";
   // $params = array(
   //             ':plan_id' => $plan_id,
