@@ -1,6 +1,8 @@
 <?php
 ini_set('error_reporting', E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED);
+// ini_set("allow_url_fopen", 1);
 include('includes/init.php');
+// echo phpInfo();
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,6 +38,12 @@ if (!$current_user) {
   <input type="submit" name="login" value="Log in">
 </form>
 <?php
+// API stuff not working
+// $json = file_get_contents('api.reimaginebanking.com/atms?key=08e6e06dd920cc34e0af881bc558d6a3');
+// echo "hi";
+// echo $json;
+// $obj = json_decode($json);
+// echo $obj->access_token;
 }
 else {
 ?>
