@@ -1,8 +1,6 @@
 <?php
 ini_set('error_reporting', E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED);
-// ini_set("allow_url_fopen", 1);
 include('includes/init.php');
-// echo phpInfo();
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,25 +13,30 @@ include('includes/init.php');
   <script src="scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
   <script src="scripts/jquery-ui.min.js" type="text/javascript"></script>
   <script src="scripts/activity.js" type="text/javascript"></script>
+  <script src="scripts/calculatedamt.js" type="text/javascript"></script>
   <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 
-  <title>Share Here- Sign In</title>
+  <title>Share Here- Bank Account</title>
 </head>
 
 <body>
 
-  <h1> ShareEarn </h1>
-  <p class = "slogan"> Envision what you can do for a better future for anyone. </p>
+  <h1> 2. Set a Charitable Giving Goal </h1>
+<div class = "option selectbar">
+  <div class = "annual">
+    <p> Annual </p>
+  </div>
+  <div class = "option weekly">
+    <p> Weekly </p>
+  </div>
+</div>
 
   <?php
   if (!$current_user) {
     ?>
     <form action="index.php" method="post">
-      <label for = "username" class = "title"> Username: </label>
-      <input type="text" name="username" placeholder="Username" required>
-      <label for = "password" ckass = "title"> Password: </label>
-      <input type="password" name="password" placeholder="Password" required>
-      <input type="submit" name="login" value="Log in">
+      <label for = "income" class = "title"> What's your estimated income?</label>
+      <input type="number" name="income" placeholder="Income" required id = "income">
     </form>
     <?php
   }
@@ -45,6 +48,14 @@ include('includes/init.php');
     <?php
   }
   ?>
-  <p> Don't have an account? Click <a href="signup.php"> here </a> to sign up now! </p>
+  <div class="slidecontainer">
+  <input type="range" min="1" max="100" value="50" class="slider" id="slider">
+  <p>Percentage: <div id="sliderAmount"></div></p>
+  </div>
+
+<p> That's </p>
+<p id = "calculatedamt"> </p>
+<p> each day! </p>
+  <p> 1 - <strong> 2 </strong></p>
 </body>
 </html>

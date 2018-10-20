@@ -20,26 +20,19 @@ include('includes/init.php');
 
 <body>
 
-  <h1> ShareEarn </h1>
-  <p class = "slogan"> Envision what you can do for a better future for anyone. </p>
+  <h1> 1. Set Your Login Details </h1>
 
   <?php
   if (!$current_user) {
     ?>
     <form action="index.php" method="post">
-      <label for = "username" ckass = "title"> Username: </label>
+      <label for = "username" class = "title"> Choose a username. </label>
       <input type="text" name="username" placeholder="Username" required>
-      <label for = "password" ckass = "title"> Password: </label>
-      <input type="password" name="password" placeholder="Password" required>
-      <label for = "email" class = "title"> Email: </label>
+      <label for = "email" class = "title"> What's you email? </label>
       <input type="text" name="email" placeholder="Email" required>
-      <input type="submit" name="create" value="Get started">
-    </form>
-
-    <form action="index.php" method="post">
-      <input type="text" name="username" placeholder="Username" required>
+      <label for = "password" class = "title"> Choose a password. </label>
       <input type="password" name="password" placeholder="Password" required>
-      <input type="submit" name="login" value="Log in">
+      <input type="submit" name="create" value="Get started">
     </form>
     <?php
   }
@@ -51,5 +44,7 @@ include('includes/init.php');
     <?php
   }
   ?>
+  <a href="goal.php"> Next </a>
+  <p> <strong> 1 </strong> - 2 </p>
 </body>
 </html>
