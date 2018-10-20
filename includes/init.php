@@ -151,6 +151,18 @@ function get_user_id() {
   $id = exec_sql_query($db, $sql, $params)->fetchAll(PDO::FETCH_COLUMN, 0)[0];
   return $id;
 }
+
+function stringToDate($date)
+{
+    // convert date and time to seconds
+    $sec = strtotime($date);
+    // convert seconds into a specific format
+    $date = date("Y-m-d H:i", $sec);
+    // print final date and time
+    return $date;
+}
+
+
 // check if logged in
 $current_user = check_login();
 // Check if we should login the user
