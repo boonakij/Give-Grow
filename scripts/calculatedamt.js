@@ -17,21 +17,9 @@ $(document).ready(function() {
     calculatedamt.innerHTML = '$'+Math.round(this.value*slider.value/days)/100;
   }
 
-  $("#annual").click(function(){
-    $("#annuallabel").addClass("checked");
-    $("#weeklylabel").removeClass("checked");
+  annual.onclick = function() {
     days = 365;
-  });
-
-
-  $("#weekly").click(function(){
-    $("#annuallabel").removeClass("checked");
-    $("#weeklylabel").addClass("checked");
-    days = 7;
-  });
-
-  annualy.onclick = function() {
-    days = 365;
+    console.log("annual");
     var income = document.getElementById("income");
     var calculatedamt = document.getElementById("calculatedamt")
     calculatedamt.innerHTML = Math.round(income.value*slider.value/days)/100;
@@ -39,6 +27,7 @@ $(document).ready(function() {
 
   weekly.onclick = function() {
     days = 7;
+    console.log("Weekly");
     var income = document.getElementById("income");
     var calculatedamt = document.getElementById("calculatedamt")
     calculatedamt.innerHTML = Math.round(income.value*slider.value/days)/100;
