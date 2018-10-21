@@ -17,7 +17,7 @@ body {
     -webkit-border-radius: 50%;
     border-radius: 50%;
     background: #81d4fa;
-    z-index: 1 !important;
+    z-index: 0!important;
 }
 
 #title-text{
@@ -38,13 +38,15 @@ button {
   height: 20%;
   position: relative;
   width: 20%;
-  z-index: 100 !important;
+  z-index: 100!important;
 }
 
 .button-container {
+  position: relative;
   margin: auto;
   text-align: center;
   width: 40%;
+  z-index: 100!important;
 }
 
 .button-container > button {
@@ -62,4 +64,5 @@ button {
   left: 0;
   bottom: 0;
   width: 100%;
+  z-index: 100!important;
 }

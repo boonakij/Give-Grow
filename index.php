@@ -33,7 +33,7 @@ include('includes/init.php');
       <h class="uk-heading-primary";
       id="title-text"; style="font-family: Montserrat, sans-serif">
         The Fault, My Dear Brutus
-    </h>
+      </h>
       <p class="tagline">Is not in our stars, but in ourselves</p>
     </div>
     <div class="circle uk-container"></div>
