@@ -23,7 +23,6 @@ footer, header, menu, nav, section {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font-family: 'Roboto';
 	vertical-align: baseline;
 }
 
@@ -33,7 +32,7 @@ ol, ul {
 
 
 body, input, textarea, select {
-	font-family: Roboto;
+	font-family: "Roboto";
 	line-height: 1.85em;
 	color: #000000;
 	font-weight: 400;

@@ -9,24 +9,55 @@ html, body, .viewport {
 
 #header {
   position: relative;
-  flex: 1;
+  flex: 1.5;
   width: 100%;
   margin: auto;
   display: flex;
   flex-direction: row;
-  background-color: blue;
-  font-size: 36px;
+  background-color: #34d2e6;
+  font-size: 28px;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+  color: white;
+  font-family: 'Montserrat'!important;
+}
+
+#header > div {
+  display: inline;
+}
+
+#header-title {
+  position: absolute;
+  left: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#header-dashboard {
+  position: absolute;
+  right: 300px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+
+#header-logout {
+  position: absolute;
+  right: 100px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #welcome-container {
   position: relative;
-  flex: 2;
+  flex: 2.5;
   width: 75%;
   margin: auto;
   display: flex;
   flex-direction: row;
   /* background-color: yellow; */
-  font-size: 36px;
+  font-size: 48px;
+  font-weight: bold;
+  font-family: "Roboto";
 }
 
 #overview-container {
@@ -38,6 +69,7 @@ html, body, .viewport {
   flex-direction: row;
   /* background-color: yellow; */
   min-height: 100px;
+  font-family: "Roboto";
 }
 
 #budget-container {
@@ -73,8 +105,9 @@ html, body, .viewport {
 #budget-amt {
   position: relative;
   text-align: center;
-  font-size: 36px;
+  font-size: 48px;
   flex: 5;
+  font-weight: 600;
 }
 
 #added-amt {
@@ -100,16 +133,22 @@ html, body, .viewport {
   /* background-color: gray; */
 }
 
+.history-item {
+  text-align: left;
+}
+
 #give-container {
   position: relative;
   flex: 6;
   width: 100%;
   display: flex;
   flex-direction: row;
+  font-family: "Roboto";
   /* background-color: pink; */
 }
 
 .category-container {
+  transition: 0.3s;
   box-sizing: border-box;
   flex: 1;
   margin: 10px;
@@ -117,6 +156,11 @@ html, body, .viewport {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+}
+
+.category-container:hover {
+  margin-top: 0px;
+  cursor: pointer;
 }
 
 
