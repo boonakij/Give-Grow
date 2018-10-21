@@ -46,12 +46,6 @@ if ( $_POST['create'] ) {
     ?>
     <form action="index.php" method="post">
       <label for = "income" class = "title"> What's your estimated income?</label>
-      <?php
-      echo $_SESSION['name'];
-      echo $_SESSION['username'];
-      echo $_SESSION['password'];
-      echo $_SESSION['email'];
-      ?>
       <input type="number" name="income" placeholder="Income" required id = "income">
     </form>
     <?php
@@ -64,8 +58,9 @@ if ( $_POST['create'] ) {
     <?php
   }
   ?>
-<<<<<<< HEAD
-  <form class="slidecontainer" method="post">
+</div>
+  <p> What percentage of your income would you like to set <br/> aside for charitable giving? </p>
+  <!-- <form class="slidecontainer" method="post">
     <input type="range" min="1" max="20" value="10" class="slider" name="slider" id="slider">
     <p>Percentage: <div id="sliderAmount"></div></p>
 
@@ -73,22 +68,19 @@ if ( $_POST['create'] ) {
     <div id = "calculatedamt"> </div>
     <p> each day! </p>
     <input type="submit" name="create" value="signup" id="logout-btn">
-  </form>
-=======
-</div>
-  <p> What percentage of your income would you like to set <br/> aside for charitable giving? </p>
-  <div class="slidecontainer">
+  </form> -->
+  <form class="slidecontainer" method="post">
     <input type="range" min="1" max="20" value="10" class="slider" id="slider">
   <p>Percentage: <div id="sliderAmount"></div></p>
-  </div>
 
   <p> That's </p>
   <div id = "calculatedamt"> </div>
   <p> each day! </p>
 
-  <a href = "dashboard.php" class = "button buttongoal"> All Set! </a>
+  <!-- <a href = "dashboard.php" class = "button buttongoal"> All Set! </a> -->
+  <input type="submit" class = "button buttongoal" name="create" value="All Set!">
+</form>
 
   <img src = "images/boi4.png" alt = "succulent" class = "goal"/>
->>>>>>> 5ba91247292c284c7435a0de2b4d3bc298c96018
 </body>
 </html>
