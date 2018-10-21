@@ -62,7 +62,9 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
       <div id="confirm-donation-modal-content">
         <span class="close">&times;</span>
         <h2 id="confirm-donation-modal-message">Would you like to donate $<span id="confirm-donation-money">0</span> to this cause?</h2>
-        <div id="modal-donate-btn">Donate</div>
+        <div class="centered"; id="modal-donate-btn">
+          <p class="centered">Donate<p>
+        </div>
       </div>
     </div>
 
