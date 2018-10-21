@@ -97,13 +97,26 @@ include('includes/init.php');
     </div>
   </div>
 </div>
-
+<div id="succ1" class="succ"></div>
+<!-- <div id="succ2" class="succ"></div> -->
+<!-- <div id="succ3" class="succ"></div> -->
+<div id="succ4" class="succ"></div>
 <div id="give-container">
-  <div class="category-container"></div>
-  <div class="category-container"></div>
-  <div class="category-container"></div>
-  <div class="category-container"></div>
+  <div id="aid-btn" class="category-container">
+    <div id="aid-btn-title">Aid</div>
+  </div>
+  <div id="education-btn" class="category-container">
+    <div id="education-btn-title">Education</div>
+  </div>
+  <div id="environment-btn" class="category-container">
+    <div id="environment-btn-title">Environment</div>
+  </div>
+  <div id="health-btn" class="category-container">
+    <div id="health-btn-title">Health</div>
+  </div>
 </div>
+
+
 
 <script>makeGraph(58, 30, 50, 38);</script>
 
