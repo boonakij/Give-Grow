@@ -337,11 +337,42 @@ rect.disabled {
 }
 
 .offering-card {
-  height: 150px;
-  flex: 40%;
-  margin: 10px;
+  transition: 0.3s all;
+  min-height: 150px;
+  flex: 35%;
+  margin: 30px;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
   text-align: left;
+  padding: 10px;
+}
+
+.offering-card:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+}
+
+.offering-card-header {
+
+}
+
+.offering-card-subheader {
+  margin-top: 0px;
+  font-size: 16px;
+}
+
+.offering-card-icon-container {
+  height: 50px;
+  line-height: 50px;
+}
+
+.offering-card-icon {
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.offering-card-link-desc {
+  font-style: italic;
+  font-size: 20px;
 }
 
 .vertically-centered {
