@@ -17,34 +17,40 @@ include('includes/init.php');
   <script src="scripts/activity.js" type="text/javascript"></script>
   <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 
-  <title>Share Here- Welcome</title>
+  <title>GiveGrow- Welcome</title>
 </head>
 
-<body>
+<body class = "welcome">
 
   <h1> Welcome to GiveGrow </h1>
 
-  <?php
-  if (!$current_user) {
-    ?>
-    <form action="index.php" method="post">
-      <label for = "username" class = "title"> Username </label>
-      <input type="text" name="username" placeholder="Username" required>
-      <label for = "password" ckass = "title"> Password </label>
-      <input type="password" name="password" placeholder="Password" required>
-      <input type="submit" name="login" value="Log in">
-    </form>
+  <div class = "bar"></div>
+
+  <div class = "information">
     <?php
-  }
-  else {
+    if (!$current_user) {
+      ?>
+      <form action="dashboard.php" method="post">
+        <label for = "username" class = "title"> Username </label>
+        <input type="text" name="username" placeholder="Username" required>
+        <label for = "password" ckass = "title"> Password </label>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" name="login" value="Log in" class = "button">
+      </form>
+      <?php
+    }
+    else {
+      ?>
+      <form action="index.php" method="post" id="logout-form">
+        <input type="submit" name="logout" value="Log out" id="logout-btn">
+      </form>
+      <?php
+    }
     ?>
-    <form action="index.php" method="post" id="logout-form">
-      <input type="submit" name="logout" value="Log out" id="logout-btn">
-    </form>
-    <?php
-  }
-  ?>
-  <a href = "dashboard" class = "button"> Log In </a>
-  <p> Don't have an account? Click <a href="getstarted.php"> here </a> to sign up now! </p>
+  </div>
+  <p> Don't have an account yet? Click <a href="getstarted.php"> here </a> to register! </p>
+
+  <img src = "images/boi2.png" alt = "succulent" class = "welcome"/>
+
 </body>
 </html>

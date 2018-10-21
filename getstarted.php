@@ -18,30 +18,36 @@ include('includes/init.php');
   <title>GiveGrow- Get Started</title>
 </head>
 
-<body>
+<body class ="getstarted">
+  <img src = "images/step1.png" alt = "Step 1" class = "step"/>
 
-  <h1> Let's get started </h1>
+  <h1 class = "step"> Let's get started </h1>
 
-  <?php
-  if (!$current_user) {
-    ?>
-    <form action="index.php" method="post">
-      <label for = "name" class = "title"> First Name </label>
-      <input type="text" name="name" placeholder="Name" required>
-      <label for = "email" class = "title"> Email </label>
-      <input type="text" name="email" placeholder="Email" required>
-      <input type="submit" name="create" value="Get started">
-    </form>
+  <div class = "bar"></div>
+  <div class = "information">
     <?php
-  }
-  else {
+    if (!$current_user) {
+      ?>
+      <form action="signup.php" method="post">
+        <label for = "name" class = "title"> First Name </label>
+        <input type="text" name="name" placeholder="Name" required>
+        <label for = "email" class = "title"> Email </label>
+        <input type="text" name="email" placeholder="Email" required>
+        <input type="submit" name="create" value="Next" class = "button">
+      </form>
+      <?php
+    }
+    else {
+      ?>
+      <form action="index.php" method="post" id="logout-form">
+        <input type="submit" name="logout" value="Log out" id="logout-btn">
+      </form>
+      <?php
+    }
     ?>
-    <form action="index.php" method="post" id="logout-form">
-      <input type="submit" name="logout" value="Log out" id="logout-btn">
-    </form>
-    <?php
-  }
-  ?>
-  <a href="signup.php" class = "button"> Next </a>
+  </div>
+
+  <img src = "images/boi3.png" alt = "succulent" class = "getstarted"/>
+
 </body>
 </html>

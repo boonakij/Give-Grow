@@ -72,6 +72,7 @@ include('includes/init.php');
   <div id="offerings-header">
     For $<input id="offerings-money-input" type="number" min="0.00" max="10000.00" step="0.01" /> you could...
   </div>
+  <div id="offerings-update-btn">Update</div>
   <div id="offerings-collection"></div>
 </div>
 
