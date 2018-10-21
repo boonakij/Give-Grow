@@ -250,6 +250,7 @@ img.step {
     font-family:'Montserrat';
     font-size:90%;
     text-align:center;
+    width: 100%;
 }
 .segmented label {
     display:block;

@@ -19,16 +19,19 @@ include('includes/init.php');
   <title>Share Here- Bank Account</title>
 </head>
 
-<body>
+<body class="goal">
+  <img src = "images/step3.png" alt = "Step 3" class = "step"/>
+  <h1 class="step"> 2. Set a Charitable Giving Goal </h1>
 
-  <h1> 2. Set a Charitable Giving Goal </h1>
+  <div class="bar bargoal"></div>
+  <div class="information">
 
-  <div class = "selectbar">
-  <label for="annual" class = "option" id = "annuallabel">Annual</label>
-  <input type="radio" id="annual" name="annual">
-  <label for="weekly" class = "option" id = "weeklylabel">Weekly</label>
-  <input type="radio" id="weekly" name="weekly">
+  <div class="container">
+  <div class="segmented">
+    <label for="annual" class = "option checked" id = "annuallabel"><input type="radio" name="segmented" id = "annual"/> Annual</label>
+    <label for="weekly" class = "option" id = "weeklylabel"><input type="radio" name="segmented" id = "weekly"/> Weekly</label>
   </div>
+</div>
 
   <?php
   if (!$current_user) {
@@ -47,14 +50,19 @@ include('includes/init.php');
     <?php
   }
   ?>
+</div>
+  <p> What percentage of your income would you like to set <br/> aside for charitable giving? </p>
   <div class="slidecontainer">
-  <input type="range" min="1" max="20" value="10" class="slider" id="slider">
+    <input type="range" min="1" max="20" value="10" class="slider" id="slider">
   <p>Percentage: <div id="sliderAmount"></div></p>
   </div>
 
-<p> That's </p>
-<div id = "calculatedamt"> </div>
-<p> each day! </p>
-  <p> 1 - <strong> 2 </strong></p>
+  <p> That's </p>
+  <div id = "calculatedamt"> </div>
+  <p> each day! </p>
+
+  <a href = "dashboard.php" class = "button buttongoal"> All Set! </a>
+
+  <img src = "images/boi4.png" alt = "succulent" class = "goal"/>
 </body>
 </html>
