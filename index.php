@@ -26,26 +26,28 @@ include('includes/init.php');
   <title>Share Here- Sign In</title>
 </head>
 
-
 <body class="uk-height-1-1">
   <div class="content-wrapper uk-container uk-background-cover">
     <div class="title-container uk-container uk-text-center">
       <h class="uk-heading-primary";
       id="title-text"; style="font-family: Montserrat, sans-serif">
-        The Fault, My Dear Brutus
-    </h>
-      <p class="tagline">Is not in our stars, but in ourselves</p>
+        The future of charitable giving.
+      </h>
+      <div class="spacer"></div>
+      <p class="tagline">Think you can't afford to donate regularly?</p>
+      <p class="tagline">Think again.</p>
     </div>
-    <div class="circle uk-container"></div>
+    <!-- <div class="circle uk-container"></div> -->
     <div class="button-container">
-      <button class="uk-button uk-button-default">Button 1</button>
-      <button class="uk-button uk-button-default">Button 2</button>
+      <button id="b1">Button 1</button>
+      <button id="b2">Button 2</button>
     </div>
   <div class="footer">
-    <img class="succ" data-src="images/succ1-01.png" uk-img>
+    <!-- <img class="succ" data-src="images/succ1-01.png" uk-img>
     <img class="succ" data-src="images/succ2-02.png" uk-img>
     <img class="succ" data-src="images/succ3-03.png" uk-img>
-    <img class="succ" data-src="images/succ4-04.png" uk-img>
+    <img class="succ" data-src="images/succ4-04.png" uk-img> -->
+    <img class="bottom-img" src="images/bgSUCCS.png">
   </div>
 </div>
 </body>
