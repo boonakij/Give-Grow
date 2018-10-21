@@ -1,0 +1,33 @@
+body {
+  background-color: #b6ffff;
+  background-image:
+  linear-gradient(
+    #26a69a, #e0f7fa
+    );
+}
+
+.circle {
+    width: 35%;
+    height:0;
+    position:absolute;
+    right: 32.5%;
+    padding-bottom: 35%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #81d4fa;
+}
+
+#title-text{
+  color: #26c6da;
+  font-family: sans-serif;
+}
+
+button {
+  border-radius: 50px;
+}
+
+.succ {
+  height: 40%;
+  width: 40%;
+}
