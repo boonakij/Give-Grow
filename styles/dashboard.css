@@ -38,6 +38,14 @@ html, body, .viewport {
   right: 300px;
   top: 50%;
   transform: translateY(-50%);
+  /* font-weight: bold; */
+}
+
+#header-dashboard> a {
+  color: white;
+}
+
+#header-dashboard> a:hover {
   font-weight: bold;
 }
 
@@ -46,6 +54,14 @@ html, body, .viewport {
   right: 100px;
   top: 50%;
   transform: translateY(-50%);
+}
+
+#header-logout > a {
+  color: white;
+}
+
+#header-logout > a:hover {
+  font-weight: bold;
 }
 
 #offerings-container {
@@ -287,7 +303,7 @@ rect.disabled {
   position: absolute;
   text-align: center;
   top: 95px;
-  width: 80px;
+  width: 100px;
   z-index: 10;
 }
 

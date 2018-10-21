@@ -43,7 +43,7 @@ button:hover {
   text-align: center;
   width: 40%;
   z-index: 100!important;
-  top: 150px;
+  top: 175px;
 }
 
 .button-container > button {
@@ -69,14 +69,14 @@ button:hover {
 
 #b2:hover {
   background-color: white;
-  border-color: white;
+  border-color: #34d2e6;
   color: #34d2e6;
 }
 
 #b1 {
   background: white;
   color: #34d2e6;
-  border-color: white;
+  border-color: #34d2e6;
 }
 
 #b1:hover {
@@ -91,19 +91,16 @@ button:hover {
   font-size: 32px;
   padding-top: 10px;
 }
-
-
-
 .footer {
   position: fixed;
   left: -50px;
   bottom: -100px;
-  width: 120%;
+  width: 150%;
   z-index: 1!important;
 }
 
 .bottom-img {
-  bottom: -10;
+  width: 70%;
 }
 
 .spacer {

@@ -61,8 +61,12 @@ include('includes/init.php');
 <div id="header">
   <div id="header-logo"></div>
   <div id="header-title">GIVE GROW</div>
-  <div id="header-dashboard">DASHBOARD</div>
-  <div id="header-logout">LOG OUT</div>
+  <div id="header-dashboard">
+     <a href="dashboard.php">DASHBOARD</a>
+  </div>
+  <div id="header-logout">
+    <a href="welcome.php">LOGOUT</a>
+  </div>
 </div>
 
 <div id="offerings-container">
