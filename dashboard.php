@@ -21,7 +21,7 @@ include('includes/init.php');
   <script src="scripts/dashboard.js" type="text/javascript"></script>
   <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 
-  <title>Share Here-Dashboard</title>
+  <title>GiveGrow -Dashboard</title>
 </head>
 
 <body>
@@ -61,6 +61,7 @@ include('includes/init.php');
 <div id="header">
   <div id="header-logo"></div>
   <div id="header-title">GIVE GROW</div>
+  <!-- <img src = "images/Whitelogo.png" alt = "logo" class = "logo"/> -->
   <div id="header-dashboard">
      <a href="dashboard.php">DASHBOARD</a>
   </div>
