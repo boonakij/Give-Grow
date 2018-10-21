@@ -26,9 +26,9 @@ include('includes/init.php');
   if (!$current_user) {
     ?>
     <form action="index.php" method="post">>
-      <label for = "username" class = "title"> Choose a username. </label>
+      <label for = "username" class = "title"> Choose a Username </label>
       <input type="text" name="username" placeholder="Username" required>
-      <label for = "password" class = "title"> Choose a password. </label>
+      <label for = "password" class = "title"> Choose a Password </label>
       <input type="password" name="password" placeholder="Password" required>
       <input type="submit" name="create" value="Get started">
     </form>
@@ -42,7 +42,7 @@ include('includes/init.php');
     <?php
   }
   ?>
-  <a href="goal.php"> Next </a>
-  <p> <strong> 1 </strong> - 2 </p>
+  <a href="goal.php" class = "button"> Next </a>
+  <p> 1 - <strong> 2 </strong> - 3</p>
 </body>
 </html>
