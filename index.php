@@ -23,10 +23,11 @@ include('includes/init.php');
   <!-- UIkit JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.19/js/uikit.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.19/js/uikit-icons.min.js"></script>
-  <title>Share Here- Sign In</title>
+  <title>GiveGrow- Sign In</title>
 </head>
 
 <body class="uk-height-1-1">
+  <img src = "images/LogoforSplash.png" alt = "logo" class = "logo"/>
   <div class="content-wrapper uk-container uk-background-cover">
     <div class="title-container uk-container uk-text-center">
       <h class="uk-heading-primary";

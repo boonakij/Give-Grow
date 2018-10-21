@@ -24,7 +24,7 @@ if ( $_POST['create'] ) {
   <script src="scripts/calculatedamt.js" type="text/javascript"></script>
   <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 
-  <title>Share Here- Bank Account</title>
+  <title>GiveGrow- Bank Account</title>
 </head>
 
 <body class="goal">

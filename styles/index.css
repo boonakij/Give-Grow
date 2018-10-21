@@ -111,3 +111,9 @@ button:hover {
   margin-top: 45px;
   text-align: center;
 }
+
+img.logo {
+  width: 25%;
+  padding-top: 3%;
+  padding-left: 5%;
+}
