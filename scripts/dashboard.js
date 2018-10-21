@@ -153,4 +153,21 @@ function makeGraph(aidCount, environmentCount, healthCount, educationCount) {
 
 }
 
-// });
+$(document).ready(function() {
+
+  $("#aid-btn").click(function(){
+    request = $.ajax({
+      url: "offerings_collector.php",
+      type: "POST",
+      data: {'category_id': 1},
+      success: function(html) {
+        if (html) {
+          $('#offerings-collection').html(html);
+          $('#dashboard-container').hide()
+          $('#offerings-container').show();
+        }
+      }
+    });
+  });
+
+});
