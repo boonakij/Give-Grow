@@ -30,9 +30,9 @@ include('includes/init.php');
       ?>
       <form action="goal.php" method="post">>
         <label for = "username" class = "title"> Choose a Username </label>
-        <input type="text" name="username" placeholder="Username" required>
+        <input type="text" name="username" placeholder="EzCornell" required>
         <label for = "password" class = "title"> Choose a Password </label>
-        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="password" placeholder="anyPerson" required>
         <input type="submit" name="create" value="Next" class = "button">
       </form>
       <?php

@@ -42,6 +42,11 @@ body, input, textarea, select {
   text-align: center;
 }
 
+body {
+  height: 100%;
+  /* overflow:hidden; */
+}
+
 a {
 	text-decoration: none;
 }
@@ -108,8 +113,8 @@ img.welcome {
 img.getstarted {
   opacity: .5;
   position: absolute;
-  left: 450px;
-  top: 30px;
+  left: 30%;
+  top: 5%;
   width: 100%;
   z-index: -1;
 }
@@ -118,8 +123,8 @@ img.getstarted {
 img.signup {
   opacity: .5;
   position: absolute;
-  left: 475px;
-  top: -100px;
+  left: 20%;
+  top: 10%;
   width: 115%;
   z-index: -1;
 }
@@ -207,6 +212,14 @@ img.step {
   margin-bottom: 3%;
   border: 0;
   box-shadow: none;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.button :hover {
+  cursor: pointer;
+  background-color: white;
+  color: #34D2E6;
 }
 
 .buttongoal {

@@ -34,8 +34,8 @@ include('includes/init.php');
         The future of charitable giving.
       </h>
       <div class="spacer"></div>
-      <p class="tagline">Think you can't afford to donate regularly?</p>
-      <p class="tagline">Think again.</p>
+      <p class="tagline">Think you can't afford to donate regularly? <br>Think again. </p>
+      <!-- <p class="tagline">Think again.</p> -->
     </div>
     <!-- <div class="circle uk-container"></div> -->
     <div class="button-container">
@@ -43,10 +43,6 @@ include('includes/init.php');
       <button id="b2" onclick="window.location='../welcome.php'">LOG IN</button>
     </div>
   <div class="footer">
-    <!-- <img class="succ" data-src="images/succ1-01.png" uk-img>
-    <img class="succ" data-src="images/succ2-02.png" uk-img>
-    <img class="succ" data-src="images/succ3-03.png" uk-img>
-    <img class="succ" data-src="images/succ4-04.png" uk-img> -->
     <img class="bottom-img" src="images/bgSUCCS.png">
   </div>
 </div>

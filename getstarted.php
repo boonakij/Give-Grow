@@ -29,11 +29,11 @@ include('includes/init.php');
     if (!$current_user) {
       ?>
       <form action="signup.php" method="post">
-        <label for = "name" class = "title"> First Name </label>
-        <input type="text" name="name" placeholder="Name" required>
+        <label for = "name" class = "title"> First name </label>
+        <input type="text" name="name" placeholder="Ezra" required>
         <label for = "email" class = "title"> Email </label>
-        <input type="text" name="email" placeholder="Email" required>
-        <input type="submit" name="create" value="Next" class = "button">
+        <input type="text" name="email" placeholder="ec1@cornell.edu" required>
+        <input type="submit" name="create" value="Next" class = "button";>
       </form>
       <?php
     }
