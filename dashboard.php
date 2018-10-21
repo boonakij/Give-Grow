@@ -74,7 +74,7 @@ include('includes/init.php');
     Aid
   </div>
   <div id="offerings-header">
-    For $<input id="offerings-money-input" type="number" min="0.00" max="10000.00" step="0.01" /> you could...
+    Donate $<input id="offerings-money-input" type="number" min="0.00" max="10000.00" step="0.01" /> to:
   </div>
   <div id="offerings-update-btn">Update</div>
   <div id="offerings-collection"></div>
@@ -99,7 +99,7 @@ include('includes/init.php');
       <div id="history-desc">Recent Donations</div>
       <div id="history-feed">
       <?php
-      $sql = "SELECT * FROM users_donations INNER JOIN offerings ON users_donations.offerings_id = offerings.id WHERE user_id = :user_id ORDER BY date(date) DESC limit 5;";
+      $sql = "SELECT * FROM users_donations INNER JOIN offerings ON users_donations.offerings_id = offerings.id WHERE user_id = :user_id ORDER BY date(date) DESC limit 2;";
       $params = array(
                   ':user_id' => get_user_id()
                 );
@@ -118,16 +118,16 @@ include('includes/init.php');
   <div id="succ3" class="succ"></div>
   <div id="succ4" class="succ"></div>
   <div id="give-container">
-    <div id="aid-btn" class="category-container">
+    <div id="aid-btn" data-money="<?php echo $new_donation_fund?>" class="category-container">
       <div id="aid-btn-title">Aid</div>
     </div>
-    <div id="education-btn" class="category-container">
+    <div id="education-btn" data-money="<?php echo $new_donation_fund?>" class="category-container">
       <div id="education-btn-title">Education</div>
     </div>
-    <div id="environment-btn" class="category-container">
+    <div id="environment-btn" data-money="<?php echo $new_donation_fund?>" class="category-container">
       <div id="environment-btn-title">Environment</div>
     </div>
-    <div id="health-btn" class="category-container">
+    <div id="health-btn" data-money="<?php echo $new_donation_fund?>" class="category-container">
       <div id="health-btn-title">Health</div>
     </div>
   </div>

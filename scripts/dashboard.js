@@ -164,6 +164,8 @@ $(document).ready(function() {
         if (html) {
           $('body').css("overflow", "auto");
           $('#offerings-collection').html(html);
+          $('#category-title-container').html("Aid");
+          $('#offerings-money-input').val($("#aid-btn").data('money'));
           $('#dashboard-container').css("display", "none");
           $('#offerings-container').css("display", "flex");
         }
@@ -175,11 +177,13 @@ $(document).ready(function() {
     request = $.ajax({
       url: "offerings_collector.php",
       type: "POST",
-      data: {'category_id': 2},
+      data: {'category_id': 4},
       success: function(html) {
         if (html) {
           $('body').css("overflow", "auto");
           $('#offerings-collection').html(html);
+          $('#category-title-container').html("Education");
+          $('#offerings-money-input').val($("#education-btn").data('money'));
           $('#dashboard-container').css("display", "none");
           $('#offerings-container').css("display", "flex");
         }
@@ -191,11 +195,13 @@ $(document).ready(function() {
     request = $.ajax({
       url: "offerings_collector.php",
       type: "POST",
-      data: {'category_id': 3},
+      data: {'category_id': 2},
       success: function(html) {
         if (html) {
           $('body').css("overflow", "auto");
           $('#offerings-collection').html(html);
+          $('#category-title-container').html("Environment");
+          $('#offerings-money-input').val($("#environment-btn").data('money'));
           $('#dashboard-container').css("display", "none");
           $('#offerings-container').css("display", "flex");
         }
@@ -207,11 +213,13 @@ $(document).ready(function() {
     request = $.ajax({
       url: "offerings_collector.php",
       type: "POST",
-      data: {'category_id': 4},
+      data: {'category_id': 3},
       success: function(html) {
         if (html) {
           $('body').css("overflow", "auto");
           $('#offerings-collection').html(html);
+          $('#category-title-container').html("Health");
+          $('#offerings-money-input').val($("#health-btn").data('money'));
           $('#dashboard-container').css("display", "none");
           $('#offerings-container').css("display", "flex");
         }
@@ -221,15 +229,48 @@ $(document).ready(function() {
 
   $("#offerings-update-btn").click(function(){
     var money = document.getElementById("offerings-money-input").value;
+    var categoryIndices = {'Aid': 1, 'Environment': 2, 'Health': 3, 'Education': 4};
+    var categoryId = categoryIndices[$('#category-title-container').html()];
     request = $.ajax({
       url: "offerings_collector.php",
       type: "POST",
-      data: {'category_id': 1, 'money': money},
+      data: {'category_id': categoryId, 'money': money},
       success: function(html) {
         if (html) {
           $('body').css("overflow", "auto");
           $('#offerings-collection').html(html);
         }
+      }
+    });
+  });
+
+  $('body').on('click', '.offering-card', function() {
+    var id = $(this).data("id");
+    var money = $(this).data("money");
+    document.getElementById('confirm-donation-modal').dataset.offeringId = id;
+    document.getElementById('confirm-donation-modal').dataset.money = money;
+    $('#confirm-donation-money').html(money);
+    $('#confirm-donation-modal').show();
+    // $("#confirm-donation-modal").data("money", id);
+  });
+
+  $('body').on('click', '.close', function() {
+    $(this).closest(".modal").hide();
+  });
+
+  $('body').on('click', '#modal-donate-btn', function() {
+    var money = $("#confirm-donation-modal").data("money");
+    var offeringId = $("#confirm-donation-modal").data("offeringId");
+    request = $.ajax({
+      url: "donate-helper.php",
+      type: "POST",
+      data: {'offeringId': offeringId, 'money': money},
+      success: function(html) {
+        alert('purchased');
+        // if (html) {
+        //   $('body').css("overflow", "auto");
+        //   $('#offerings-collection').html(html);
+        // }
       }
     });
   });
