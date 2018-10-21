@@ -36,8 +36,8 @@ include('includes/init.php');
     </h>
       <p class="tagline">Is not in our stars, but in ourselves</p>
     </div>
-    <!-- <div class="circle uk-container"></div> -->
-    <div class="button-container uk-container uk-flex">
+    <div class="circle uk-container"></div>
+    <div class="button-container">
       <button class="uk-button uk-button-default">Button 1</button>
       <button class="uk-button uk-button-default">Button 2</button>
     </div>
