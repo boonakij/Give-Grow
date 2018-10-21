@@ -38,15 +38,9 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
     <?php
     if (!$current_user) {
       ?>
-<<<<<<< HEAD
       <form action="getstarted.php" method="post">
         <label for = "name" class = "title"> First Name </label>
         <input type="text" name="name" placeholder="Name" required>
-=======
-      <form action="signup.php" method="post">
-        <label for = "name" class = "title"> First name </label>
-        <input type="text" name="name" placeholder="Ezra" required>
->>>>>>> 850b7cb167994774f53dcc36495dfb1b28724259
         <label for = "email" class = "title"> Email </label>
         <input type="text" name="email" placeholder="ec1@cornell.edu" required>
         <input type="submit" name="create" value="Next" class = "button";>
