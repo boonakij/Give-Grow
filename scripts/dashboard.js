@@ -2,6 +2,8 @@
 
 function makeGraph(aidCount, environmentCount, healthCount, educationCount) {
 
+  // Gotten from https://codepen.io/lisaofalltrades/pen/jZyzKo?editors=1111
+
   // define data
   var dataset = [
       {label: "Aid", count: aidCount},
@@ -59,7 +61,7 @@ function makeGraph(aidCount, environmentCount, healthCount, educationCount) {
     d.enabled = true; // add enabled property to track which entries are checked
   });
 
-  var color = d3.scaleOrdinal().domain(["Aid", "Environment", "Health", "Education"]).range(["#eeff00", "#ff0022", "#2200ff", "#521042"]);
+  var color = d3.scaleOrdinal().domain(["Aid", "Environment", "Health", "Education"]).range(["#f6a585", "#ca9fe7", "#fcb43e", "#73d8dc"]);
   // creating the chart
   var path = svg.selectAll('path') // select all path elements inside the svg. specifically the 'g' element. they don't exist yet but they will be created below
     .data(pie(dataset)) //associate dataset wit he path elements we're about to create. must pass through the pie function. it magically knows how to extract values and bakes it into the pie
@@ -151,4 +153,21 @@ function makeGraph(aidCount, environmentCount, healthCount, educationCount) {
 
 }
 
-// });
+$(document).ready(function() {
+
+  $("#aid-btn").click(function(){
+    request = $.ajax({
+      url: "offerings_collector.php",
+      type: "POST",
+      data: {'category_id': 1},
+      success: function(html) {
+        if (html) {
+          $('#offerings-collection').html(html);
+          $('#dashboard-container').hide()
+          $('#offerings-container').show();
+        }
+      }
+    });
+  });
+
+});

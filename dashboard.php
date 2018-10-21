@@ -65,44 +65,67 @@ include('includes/init.php');
   <div id="header-logout">LOG OUT</div>
 </div>
 
-<div id="welcome-container">
-  <span class="vertically-centered">Hi <?php echo $current_user?>, welcome back!</span>
+<div id="offerings-container">
+  <div id="category-title-container">
+    Aid
+  </div>
+  <div id="offerings-header">
+    For $<input id="offerings-money-input" type="number" min="0.00" max="10000.00" step="0.01" /> you could...
+  </div>
+  <div id="offerings-collection"></div>
 </div>
 
-<div id="overview-container">
-  <div id="budget-container">
-    <div id="budget-desc">Current Budget</div>
-    <div id="budget-amt"><span class="centered">$<?php echo $new_donation_fund?></span></div>
-    <div id="added-amt">+ $<?php echo $money_difference?> since last visit</div>
-</div>
-  <div id="data-container">
-    <div id="chart">
-    </div>
+<div id=dashboard-container>
+  <div id="welcome-container">
+    <span class="vertically-centered">Hi <?php echo $current_user?>, welcome back!</span>
   </div>
-  <div id="history-container">
-    <div id="history-desc">Recent Donations</div>
-    <div id="history-feed">
-    <?php
-    $sql = "SELECT * FROM users_donations INNER JOIN offerings ON users_donations.offerings_id = offerings.id WHERE user_id = :user_id ORDER BY date(date) DESC limit 5;";
-    $params = array(
-                ':user_id' => get_user_id()
-              );
-    $user_donations = exec_sql_query($db, $sql, $params)->fetchAll();
-    foreach ($user_donations as $user_donation) {
-    ?>
-        <p class="history-item"><?php echo date('m/d/y',strtotime($user_donation['date']));?>: <?php echo formatDescriptionString($user_donation['desc'], $user_donation['donation_amt']/$user_donation['cost']);?></p>
-    <?php
-    }
-    ?>
-    </div>
-  </div>
-</div>
 
-<div id="give-container">
-  <div class="category-container"></div>
-  <div class="category-container"></div>
-  <div class="category-container"></div>
-  <div class="category-container"></div>
+  <div id="overview-container">
+    <div id="budget-container">
+      <div id="budget-desc">Current Budget</div>
+      <div id="budget-amt"><span class="centered">$<?php echo $new_donation_fund?></span></div>
+      <div id="added-amt">+ $<?php echo $money_difference?> since last visit</div>
+  </div>
+    <div id="data-container">
+      <div id="chart">
+      </div>
+    </div>
+    <div id="history-container">
+      <div id="history-desc">Recent Donations</div>
+      <div id="history-feed">
+      <?php
+      $sql = "SELECT * FROM users_donations INNER JOIN offerings ON users_donations.offerings_id = offerings.id WHERE user_id = :user_id ORDER BY date(date) DESC limit 5;";
+      $params = array(
+                  ':user_id' => get_user_id()
+                );
+      $user_donations = exec_sql_query($db, $sql, $params)->fetchAll();
+      foreach ($user_donations as $user_donation) {
+      ?>
+          <p class="history-item"><?php echo date('m/d/y',strtotime($user_donation['date']));?>: <?php echo formatDescriptionString($user_donation['desc'], $user_donation['donation_amt']/$user_donation['cost']);?></p>
+      <?php
+      }
+      ?>
+      </div>
+    </div>
+  </div>
+  <div id="succ1" class="succ"></div>
+  <div id="succ2" class="succ"></div>
+  <div id="succ3" class="succ"></div>
+  <div id="succ4" class="succ"></div>
+  <div id="give-container">
+    <div id="aid-btn" class="category-container">
+      <div id="aid-btn-title">Aid</div>
+    </div>
+    <div id="education-btn" class="category-container">
+      <div id="education-btn-title">Education</div>
+    </div>
+    <div id="environment-btn" class="category-container">
+      <div id="environment-btn-title">Environment</div>
+    </div>
+    <div id="health-btn" class="category-container">
+      <div id="health-btn-title">Health</div>
+    </div>
+  </div>
 </div>
 
 <script>makeGraph(58, 30, 50, 38);</script>
