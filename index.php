@@ -39,8 +39,8 @@ include('includes/init.php');
     </div>
     <!-- <div class="circle uk-container"></div> -->
     <div class="button-container">
-      <button id="b1" onclick="getstarted.php">SIGN UP</button>
-      <button id="b2" onclick="welcome.php">LOG IN</button>
+      <button id="b1" onclick="window.location='../getstarted.php'">SIGN UP</button>
+      <button id="b2" onclick="window.location='../welcome.php'">LOG IN</button>
     </div>
   <div class="footer">
     <!-- <img class="succ" data-src="images/succ1-01.png" uk-img>
