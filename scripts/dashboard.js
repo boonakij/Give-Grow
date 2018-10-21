@@ -168,6 +168,7 @@ $(document).ready(function() {
           $('#offerings-money-input').val($("#aid-btn").data('money'));
           $('#dashboard-container').css("display", "none");
           $('#offerings-container').css("display", "flex");
+          $('#category-title-container-inner').css("background-image", 'url("../images/aid.png");');
         }
       }
     });
@@ -186,6 +187,7 @@ $(document).ready(function() {
           $('#offerings-money-input').val($("#education-btn").data('money'));
           $('#dashboard-container').css("display", "none");
           $('#offerings-container').css("display", "flex");
+          $('#category-title-container-inner').css("background-image", 'url("../images/education.png");');
         }
       }
     });
@@ -204,6 +206,7 @@ $(document).ready(function() {
           $('#offerings-money-input').val($("#environment-btn").data('money'));
           $('#dashboard-container').css("display", "none");
           $('#offerings-container').css("display", "flex");
+          $('#category-title-container-inner').css("background-image", 'url("../images/environment.png");');
         }
       }
     });
@@ -222,6 +225,7 @@ $(document).ready(function() {
           $('#offerings-money-input').val($("#health-btn").data('money'));
           $('#dashboard-container').css("display", "none");
           $('#offerings-container').css("display", "flex");
+          $('#category-title-container-inner').css("background-image", 'url("../images/health.png");');
         }
       }
     });
