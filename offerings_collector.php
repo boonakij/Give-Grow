@@ -5,7 +5,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
     $money = round(filter_input(INPUT_POST, 'money', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION), 2);
     $category_id = filter_input(INPUT_POST, 'category_id', FILTER_SANITIZE_NUMBER_INT);
     if ($category_id) {
-      $sql = "SELECT offerings.id as id, desc, cost FROM offerings INNER JOIN categories ON offerings.category_id = categories.id WHERE categories.id = :categories_id;";
+      $sql = "SELECT offerings.id as id, desc, cost, companies.name as company_name, companies.url as company_url FROM offerings INNER JOIN categories ON offerings.category_id = categories.id INNER JOIN companies ON offerings.company_id = companies.id WHERE categories.id = :categories_id;";
       $params = array(
                   ':categories_id' => $category_id
                 );
@@ -20,11 +20,13 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
     }
     echo $money;
     foreach($offerings as $offering) {
-      echo  formatDescriptionString($offering['desc'], $money/$offering['cost']);
-      echo $offering['id'];
 ?>
-    <div id="offering-card" data-id="<?php echo $offering['id']?>">
-      formatDescriptionString($offering['desc'], $money/$offering['cost'])
+    <div class="offering-card" data-id="<?php echo $offering['id']?>">
+      <?php echo formatDescriptionString($offering['desc'], $money/$offering['cost']) ?>
+    </div>
+    <div class="offering-card" data-id="<?php echo $offering['id']?>">
+      <?php echo formatDescriptionString($offering['desc'], $money/$offering['cost']) ?>
+      Provided by <a target="_blank" href="<?php echo $offering['company_url']?>"><?php echo $offering['company_name'] ?></a>
     </div>
 <?php
   }

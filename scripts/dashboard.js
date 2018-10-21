@@ -162,9 +162,73 @@ $(document).ready(function() {
       data: {'category_id': 1},
       success: function(html) {
         if (html) {
+          $('body').css("overflow", "auto");
           $('#offerings-collection').html(html);
-          $('#dashboard-container').hide()
-          $('#offerings-container').show();
+          $('#dashboard-container').css("display", "none");
+          $('#offerings-container').css("display", "flex");
+        }
+      }
+    });
+  });
+
+  $("#education-btn").click(function(){
+    request = $.ajax({
+      url: "offerings_collector.php",
+      type: "POST",
+      data: {'category_id': 2},
+      success: function(html) {
+        if (html) {
+          $('body').css("overflow", "auto");
+          $('#offerings-collection').html(html);
+          $('#dashboard-container').css("display", "none");
+          $('#offerings-container').css("display", "flex");
+        }
+      }
+    });
+  });
+
+  $("#environment-btn").click(function(){
+    request = $.ajax({
+      url: "offerings_collector.php",
+      type: "POST",
+      data: {'category_id': 3},
+      success: function(html) {
+        if (html) {
+          $('body').css("overflow", "auto");
+          $('#offerings-collection').html(html);
+          $('#dashboard-container').css("display", "none");
+          $('#offerings-container').css("display", "flex");
+        }
+      }
+    });
+  });
+
+  $("#health-btn").click(function(){
+    request = $.ajax({
+      url: "offerings_collector.php",
+      type: "POST",
+      data: {'category_id': 4},
+      success: function(html) {
+        if (html) {
+          $('body').css("overflow", "auto");
+          $('#offerings-collection').html(html);
+          $('#dashboard-container').css("display", "none");
+          $('#offerings-container').css("display", "flex");
+        }
+      }
+    });
+  });
+
+  $("#offerings-update-btn").click(function(){
+    var money = document.getElementById("offerings-money-input").value;
+    request = $.ajax({
+      url: "offerings_collector.php",
+      type: "POST",
+      data: {'category_id': 1, 'money': money},
+      success: function(html) {
+        if (html) {
+          $('body').css("overflow", "auto");
+          $('#offerings-collection').html(html);
         }
       }
     });
