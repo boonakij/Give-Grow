@@ -23,14 +23,18 @@ body {
   font-weight: bold;
 }
 
-button {
-  border-radius: 50px;
-}
-
 .title-container {
   position:relative;
   top: 100px;
   z-index: 100!important;
+}
+
+button {
+  border-radius: 50px;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .button-container {
@@ -53,6 +57,8 @@ button {
   padding-bottom: 2.5%;
   font-family: "Montserrat", sans serif;
   font-size: 20px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
 }
 
 #b2 {
@@ -61,12 +67,23 @@ button {
   border-color: #34d2e6;
 }
 
+#b2:hover {
+  background-color: white;
+  border-color: white;
+  color: #34d2e6;
+}
+
 #b1 {
   background: white;
   color: #34d2e6;
   border-color: white;
 }
 
+#b1:hover {
+  background: #34d2e6;
+  color: white;
+  border-color: #34d2e6;
+}
 
 .tagline {
   font-family: 'Montserrat', sans serif;
