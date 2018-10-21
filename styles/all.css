@@ -1,3 +1,7 @@
+h1 {
+  text-align: center;
+}
+
 .selectbar {
   width: 40%;
   display: flex;

@@ -13,29 +13,24 @@ include('includes/init.php');
   <script src="scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
   <script src="scripts/jquery-ui.min.js" type="text/javascript"></script>
   <script src="scripts/activity.js" type="text/javascript"></script>
-  <script src="scripts/calculatedamt.js" type="text/javascript"></script>
   <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 
-  <title>Share Here- Goal</title>
+  <title>Share Here- Sign Up</title>
 </head>
 
 <body>
 
-  <h1> 2. Set a Charitable Giving Goal </h1>
-
-<div class = "selectbar">
-<label for="annual" class = "option" id = "annuallabel">Annual</label>
-<input type="radio" id="annual" name="annual">
-<label for="weekly" class = "option" id = "weeklylabel">Weekly</label>
-<input type="radio" id="weekly" name="weekly">
-</div>
+  <h1> Set Your Login Details </h1>
 
   <?php
   if (!$current_user) {
     ?>
-    <form action="index.php" method="post">
-      <label for = "income" class = "title"> What's your estimated income?</label>
-      <input type="number" name="income" placeholder="Income" required id = "income">
+    <form action="index.php" method="post">>
+      <label for = "username" class = "title"> Choose a username. </label>
+      <input type="text" name="username" placeholder="Username" required>
+      <label for = "password" class = "title"> Choose a password. </label>
+      <input type="password" name="password" placeholder="Password" required>
+      <input type="submit" name="create" value="Get started">
     </form>
     <?php
   }
@@ -47,16 +42,7 @@ include('includes/init.php');
     <?php
   }
   ?>
-  <div class="slidecontainer">
-  <input type="range" min="1" max="100" value="50" class="slider" id="slider">
-  <p>Percentage: <div id="sliderAmount"></div></p>
-  </div>
-
-<p> That's </p>
-<div id = "calculatedamt"> </div>
-<p> each day! </p>
-
-<a href "dashboard.php"> All Set! </a>
-  <p> 1 - <strong> 2 </strong></p>
+  <a href="goal.php"> Next </a>
+  <p> <strong> 1 </strong> - 2 </p>
 </body>
 </html>
