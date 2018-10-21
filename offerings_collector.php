@@ -20,7 +20,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
     }
     foreach($offerings as $offering) {
 ?>
-    <div class="offering-card" data-id="<?php echo $offering['id']?>">
+    <div class="offering-card" data-money="<?php echo $money ?>" data-id="<?php echo $offering['id']?>">
       <?php
       $offeringStr = formatDescriptionString($offering['desc_long'], $money/$offering['cost']);
       if(strpos($offeringStr, '[')) {
@@ -58,7 +58,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 <?php
   }
 ?>
-    <div class="modal" id="confirm-donation-modal" data-offering-id="" data-money="">
+    <div class="modal" id="confirm-donation-modal" data-offering-id="3" data-money="3">
       <div id="confirm-donation-modal-content">
         <span class="close">&times;</span>
         <h2 id="confirm-donation-modal-message">Would you like to donate $<span id="confirm-donation-money">0</span> to this cause?</h2>

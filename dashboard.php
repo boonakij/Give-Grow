@@ -70,7 +70,7 @@ include('includes/init.php');
     Aid
   </div>
   <div id="offerings-header">
-    For $<input id="offerings-money-input" type="number" min="0.00" max="10000.00" step="0.01" /> you could...
+    Donate $<input id="offerings-money-input" type="number" min="0.00" max="10000.00" step="0.01" /> to:
   </div>
   <div id="offerings-update-btn">Update</div>
   <div id="offerings-collection"></div>
@@ -95,7 +95,7 @@ include('includes/init.php');
       <div id="history-desc">Recent Donations</div>
       <div id="history-feed">
       <?php
-      $sql = "SELECT * FROM users_donations INNER JOIN offerings ON users_donations.offerings_id = offerings.id WHERE user_id = :user_id ORDER BY date(date) DESC limit 5;";
+      $sql = "SELECT * FROM users_donations INNER JOIN offerings ON users_donations.offerings_id = offerings.id WHERE user_id = :user_id ORDER BY date(date) DESC limit 2;";
       $params = array(
                   ':user_id' => get_user_id()
                 );

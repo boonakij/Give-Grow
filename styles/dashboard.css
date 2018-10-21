@@ -375,6 +375,49 @@ rect.disabled {
   font-size: 20px;
 }
 
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+}
+
+.close {
+  color: #aaaaaa;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#confirm-donation-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0px;
+  width: 500px;
+  height: 300px;
+  overflow-y: auto;
+  text-align: center;
+  border-radius: 10px;
+}
+
 .vertically-centered {
   position: absolute;
   top: 50%;
