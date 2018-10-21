@@ -114,16 +114,16 @@ include('includes/init.php');
   <div id="succ3" class="succ"></div>
   <div id="succ4" class="succ"></div>
   <div id="give-container">
-    <div id="aid-btn" class="category-container">
+    <div id="aid-btn" data-money="<?php echo $new_donation_fund?>" class="category-container">
       <div id="aid-btn-title">Aid</div>
     </div>
-    <div id="education-btn" class="category-container">
+    <div id="education-btn" data-money="<?php echo $new_donation_fund?>" class="category-container">
       <div id="education-btn-title">Education</div>
     </div>
-    <div id="environment-btn" class="category-container">
+    <div id="environment-btn" data-money="<?php echo $new_donation_fund?>" class="category-container">
       <div id="environment-btn-title">Environment</div>
     </div>
-    <div id="health-btn" class="category-container">
+    <div id="health-btn" data-money="<?php echo $new_donation_fund?>" class="category-container">
       <div id="health-btn-title">Health</div>
     </div>
   </div>

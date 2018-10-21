@@ -164,6 +164,8 @@ $(document).ready(function() {
         if (html) {
           $('body').css("overflow", "auto");
           $('#offerings-collection').html(html);
+          $('#category-title-container').html("Aid");
+          $('#offerings-money-input').val($("#aid-btn").data('money'));
           $('#dashboard-container').css("display", "none");
           $('#offerings-container').css("display", "flex");
         }
@@ -180,6 +182,8 @@ $(document).ready(function() {
         if (html) {
           $('body').css("overflow", "auto");
           $('#offerings-collection').html(html);
+          $('#category-title-container').html("Education");
+          $('#offerings-money-input').val($("#education-btn").data('money'));
           $('#dashboard-container').css("display", "none");
           $('#offerings-container').css("display", "flex");
         }
@@ -196,6 +200,8 @@ $(document).ready(function() {
         if (html) {
           $('body').css("overflow", "auto");
           $('#offerings-collection').html(html);
+          $('#category-title-container').html("Environment");
+          $('#offerings-money-input').val($("#environment-btn").data('money'));
           $('#dashboard-container').css("display", "none");
           $('#offerings-container').css("display", "flex");
         }
@@ -212,6 +218,8 @@ $(document).ready(function() {
         if (html) {
           $('body').css("overflow", "auto");
           $('#offerings-collection').html(html);
+          $('#category-title-container').html("Health");
+          $('#offerings-money-input').val($("#health-btn").data('money'));
           $('#dashboard-container').css("display", "none");
           $('#offerings-container').css("display", "flex");
         }

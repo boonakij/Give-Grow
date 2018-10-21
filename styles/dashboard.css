@@ -322,6 +322,10 @@ rect.disabled {
   margin: auto;
 }
 
+#offerings-update-btn:hover {
+  cursor: pointer;
+}
+
 #offerings-collection {
   position: relative;
   flex: auto;
