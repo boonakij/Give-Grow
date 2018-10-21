@@ -8,8 +8,8 @@ var dataset = [
   ];
 
 // chart dimensions
-var width = 300;
-var height = 300;
+var width = 250;
+var height = 250;
 
 // a circle chart needs a radius
 var radius = Math.min(width, height) / 2;

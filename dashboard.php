@@ -57,10 +57,18 @@ include('includes/init.php');
   $offering_desc = str_replace("_count", round($new_donation_fund/$offering['cost'], 1), $offering['desc']);
 ?>
 
+<div id="header">
+  header
+</div>
+
+<div id="welcome-container">
+  <span class="vertically-centered">Hi <?php echo $current_user?>, welcome back!</span>
+</div>
+
 <div id="overview-container">
   <div id="budget-container">
     <div id="budget-desc">Current Budget</div>
-    <div id="budget-amt"><span class="vertically-centered">$<?php echo $new_donation_fund?></span></div>
+    <div id="budget-amt"><span class="centered">$<?php echo $new_donation_fund?></span></div>
     <div id="added-amt">+ $<?php echo $money_difference?> since last visit</div>
 </div>
   <div id="data-container">
@@ -78,8 +86,7 @@ include('includes/init.php');
     $user_donations = exec_sql_query($db, $sql, $params)->fetchAll();
     foreach ($user_donations as $user_donation) {
     ?>
-      <p><?php echo $user_donation['date'];?></p>
-      <p><?php echo $user_donation['desc'];?></p>
+        <p><?php echo $user_donation['date'];?>: <?php echo formatDescriptionString($user_donation['desc'], $user_donation['donation_amt']/$user_donation['cost']);?></p>
     <?php
     }
     ?>
@@ -88,7 +95,10 @@ include('includes/init.php');
 </div>
 
 <div id="give-container">
-
+  <div class="category-container"></div>
+  <div class="category-container"></div>
+  <div class="category-container"></div>
+  <div class="category-container"></div>
 </div>
 
 </body>
