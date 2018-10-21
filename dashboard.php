@@ -74,9 +74,8 @@ include('includes/init.php');
     Aid
   </div>
   <div id="offerings-header">
-    Donate $<input id="offerings-money-input" type="number" min="0.00" max="10000.00" step="0.01" /> to:
+    Donate $<input id="offerings-money-input" type="number" min="0.00" max="10000.00" step="0.01" /> to: <div id="offerings-update-btn">Update</div>
   </div>
-  <div id="offerings-update-btn">Update</div>
   <div id="offerings-collection"></div>
 </div>
 

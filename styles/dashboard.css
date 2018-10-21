@@ -316,7 +316,7 @@ rect.disabled {
 #category-title-container {
   font-size: 48px;
   position: absolute;
-  top: 100px;
+  top: 10px;
   left: 60px;
 }
 
@@ -329,11 +329,13 @@ rect.disabled {
 }
 
 #offerings-update-btn {
-  width: 100px;
+  display: inline-block;
+  width: 200px;
   height: 50px;
   background-color: #34d2e6;
   line-height: 50px;
   border-radius: 10px;
+  font-size: 36px;
   color: white;
   margin: auto;
 }
