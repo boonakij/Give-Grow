@@ -38,7 +38,7 @@ if ( $_POST['signup'] ) {
     <?php
     if (!$current_user) {
       ?>
-      <form action="signup.php" method="post">>
+      <form action="signup.php" method="post">
         <label for = "username" class = "title"> Choose a Username </label>
         <input type="text" name="username" placeholder="EzCornell" required>
         <label for = "password" class = "title"> Choose a Password </label>

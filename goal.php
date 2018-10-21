@@ -74,7 +74,7 @@ if ( $_POST['create'] ) {
   <p>Percentage: <div id="sliderAmount"></div></p>
 
   <p> That's </p>
-  <div id = "calculatedamt"> </div>
+  <div id = "calculatedamt">$0 </div>
   <p> each day! </p>
 
   <!-- <a href = "dashboard.php" class = "button buttongoal"> All Set! </a> -->
