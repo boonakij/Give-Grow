@@ -1,6 +1,14 @@
 <?php
 ini_set('error_reporting', E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED);
 include('includes/init.php');
+
+session_start();
+
+if ( $_POST['create'] ) {
+    $amt = filter_input(INPUT_POST, 'slider');
+    create_account($_SESSION['username'], $_SESSION['password'], $_SESSION['email'], $_SESSION['name'], $amt);
+    header('Location: dashboard.php');
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,8 +16,8 @@ include('includes/init.php');
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
   <link rel="stylesheet" type="text/css" href="styles/jquery-ui.min.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
   <script src="scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
   <script src="scripts/jquery-ui.min.js" type="text/javascript"></script>
   <script src="scripts/activity.js" type="text/javascript"></script>
@@ -52,16 +60,26 @@ include('includes/init.php');
   ?>
 </div>
   <p> What percentage of your income would you like to set <br/> aside for charitable giving? </p>
-  <div class="slidecontainer">
+  <!-- <form class="slidecontainer" method="post">
+    <input type="range" min="1" max="20" value="10" class="slider" name="slider" id="slider">
+    <p>Percentage: <div id="sliderAmount"></div></p>
+
+    <p> That's </p>
+    <div id = "calculatedamt"> </div>
+    <p> each day! </p>
+    <input type="submit" name="create" value="signup" id="logout-btn">
+  </form> -->
+  <form class="slidecontainer" method="post">
     <input type="range" min="1" max="20" value="10" class="slider" id="slider">
   <p>Percentage: <div id="sliderAmount"></div></p>
-  </div>
 
   <p> That's </p>
   <div id = "calculatedamt"> </div>
   <p> each day! </p>
 
-  <a href = "dashboard.php" class = "button buttongoal"> All Set! </a>
+  <!-- <a href = "dashboard.php" class = "button buttongoal"> All Set! </a> -->
+  <input type="submit" class = "button buttongoal" name="create" value="All Set!">
+</form>
 
   <img src = "images/boi4.png" alt = "succulent" class = "goal"/>
 </body>
