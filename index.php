@@ -5,46 +5,50 @@ include('includes/init.php');
 // echo phpInfo();
 ?>
 <!DOCTYPE html>
-<html>
+<html class="uk-height-1-1">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="styles/index.css" media="all" />
   <link rel="stylesheet" type="text/css" href="styles/jquery-ui.min.css" media="all" />
   <script src="scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
   <script src="scripts/jquery-ui.min.js" type="text/javascript"></script>
   <script src="scripts/activity.js" type="text/javascript"></script>
   <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300" rel="stylesheet">
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.19/css/uikit.min.css" />
 
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.19/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.19/js/uikit-icons.min.js"></script>
   <title>Share Here- Sign In</title>
 </head>
 
-<body>
-
-  <h1> ShareEarn </h1>
-  <p class = "slogan"> Envision what you can do for a better future for anyone. </p>
-
-  <?php
-  if (!$current_user) {
-    ?>
-    <form action="index.php" method="post">
-      <label for = "username" class = "title"> Username: </label>
-      <input type="text" name="username" placeholder="Username" required>
-      <label for = "password" ckass = "title"> Password: </label>
-      <input type="password" name="password" placeholder="Password" required>
-      <input type="submit" name="login" value="Log in">
-    </form>
-    <?php
-  }
-  else {
-    ?>
-    <form action="index.php" method="post" id="logout-form">
-      <input type="submit" name="logout" value="Log out" id="logout-btn">
-    </form>
-    <?php
-  }
-  ?>
-  <p> Don't have an account? Click <a href="signup.php"> here </a> to sign up now! </p>
+<body class="uk-height-1-1">
+  <div class="content-wrapper uk-container uk-background-cover">
+    <div class="title-container uk-container uk-text-center">
+      <h class="uk-heading-primary";
+      id="title-text"; style="font-family: Montserrat, sans-serif">
+        The future of charitable giving.
+      </h>
+      <div class="spacer"></div>
+      <p class="tagline">Think you can't afford to donate regularly?</p>
+      <p class="tagline">Think again.</p>
+    </div>
+    <!-- <div class="circle uk-container"></div> -->
+    <div class="button-container">
+      <button id="b1">Button 1</button>
+      <button id="b2">Button 2</button>
+    </div>
+  <div class="footer">
+    <!-- <img class="succ" data-src="images/succ1-01.png" uk-img>
+    <img class="succ" data-src="images/succ2-02.png" uk-img>
+    <img class="succ" data-src="images/succ3-03.png" uk-img>
+    <img class="succ" data-src="images/succ4-04.png" uk-img> -->
+    <img class="bottom-img" src="images/bgSUCCS.png">
+  </div>
+</div>
 </body>
 </html>

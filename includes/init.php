@@ -162,6 +162,21 @@ function stringToDate($date)
     return $date;
 }
 
+function formatDescriptionString($sqlString, $units) {
+  if (strpos($sqlString, "{") != false) {
+    if ($units == 1) {
+      $sqlString = substr($sqlString, 0, strpos($sqlString, "{")) . substr($sqlString, strpos($sqlString, "{") + 1, strpos($sqlString, ",", strpos($sqlString, "{") + 1) - strpos($sqlString, "{") - 1) . substr($sqlString, strpos($sqlString, "}") + 1);
+    }
+    else {
+      $sqlString = substr($sqlString, 0, strpos($sqlString, "{")) . substr($sqlString, strpos($sqlString, ",") + 1, strpos($sqlString, "}", strpos($sqlString, ",") + 1) - strpos($sqlString, ",") - 1) . substr($sqlString, strpos($sqlString, "}") + 1);
+    }
+  }
+  if (strpos($sqlString, "_count") != false) {
+    $sqlString = str_replace("_count", round($units, 1), $sqlString);
+  }
+  return $sqlString;
+}
+
 
 // check if logged in
 $current_user = check_login();
