@@ -20,28 +20,26 @@ $(document).ready(function() {
   $("#annual").click(function(){
     $("#annuallabel").addClass("checked");
     $("#weeklylabel").removeClass("checked");
-    days = 365;
   });
 
 
   $("#weekly").click(function(){
     $("#annuallabel").removeClass("checked");
     $("#weeklylabel").addClass("checked");
-    days = 7;
   });
 
-  annualy.onclick = function() {
+  annual.onclick = function() {
     days = 365;
     var income = document.getElementById("income");
     var calculatedamt = document.getElementById("calculatedamt")
-    calculatedamt.innerHTML = Math.round(income.value*slider.value/days)/100;
+    calculatedamt.innerHTML = '$'+Math.round(income.value*slider.value/days)/100;
   }
 
   weekly.onclick = function() {
     days = 7;
     var income = document.getElementById("income");
     var calculatedamt = document.getElementById("calculatedamt")
-    calculatedamt.innerHTML = Math.round(income.value*slider.value/days)/100;
+    calculatedamt.innerHTML = '$'+Math.round(income.value*slider.value/days)/100;
   }
 
 });

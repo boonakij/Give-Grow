@@ -19,12 +19,12 @@ include('includes/init.php');
   <title>GiveGrow- Goal</title>
 </head>
 
-<body>
+<body class = "goal">
   <img src = "images/step3.png" alt = "Step 3" class = "step"/>
 
   <h1 class = "step"> Set a Charitable Giving Goal </h1>
 
-  <div class = "bar"></div>
+  <div class = "bar bargoal"></div>
     <div class = "information">
 
   <!-- <div class = "selectbar">
@@ -36,7 +36,7 @@ include('includes/init.php');
 
   <div class="container">
   <div class="segmented">
-    <label for="annual" class = "option" id = "annuallabel"><input type="radio" name="segmented" id = "annual"/> Annual</label>
+    <label for="annual" class = "option checked" id = "annuallabel"><input type="radio" name="segmented" id = "annual"/> Annual</label>
     <label for="weekly" class = "option" id = "weeklylabel"><input type="radio" name="segmented" id = "weekly"/> Weekly</label>
   </div>
 </div>
@@ -44,7 +44,7 @@ include('includes/init.php');
   <?php
   if (!$current_user) {
     ?>
-    <form action="index.php" method="post">
+    <form action="dashboard.php" method="post">
       <label for = "income" class = "title"> Income </label>
       <input type="number" name="income" placeholder="Income" required id = "income" value="0">
     </form>
@@ -65,10 +65,10 @@ include('includes/init.php');
     <p class = "slideramt"><div id="sliderAmount"></div></p>
   </div>
   <p> That's </p>
-  <div id = "calculatedamt"></div>
+  <div id = "calculatedamt">$0</div>
   <p> each day! </p>
 
-  <a href "dashboard.php"> All Set! </a>
+  <a href = "dashboard.php" class = "button buttongoal"> All Set! </a>
 
   <img src = "images/boi4.png" alt = "succulent" class = "goal"/>
 

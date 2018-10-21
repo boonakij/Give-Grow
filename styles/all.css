@@ -36,7 +36,7 @@ body, input, textarea, select {
 	line-height: 1.85em;
 	color: #000000;
 	font-weight: 400;
-	font-size: 16pt;
+	font-size: 18pt;
   letter-spacing: 0.028em;
 	line-height: 1.70;
   text-align: center;
@@ -48,7 +48,7 @@ a {
 
 h1 {
   padding-top: 1em;
-  font-size: 4.5em;
+  font-size: 4em;
   text-align: center;
 }
 
@@ -56,7 +56,7 @@ h1.step {
   padding-top: .5em;
 }
 
-body.welcome, body.getstarted, body.signup{
+body.welcome, body.getstarted, body.signup, body.goal{
   margin: 0;
   height: 100%;
   overflow: hidden;
@@ -124,6 +124,15 @@ img.signup {
   z-index: -1;
 }
 
+img.goal {
+  opacity: .5;
+  position: absolute;
+  left: 700px;
+  top: 200px;
+  width: 90%;
+  z-index: -1;
+}
+
 img.step {
   padding-top: 3em;
 }
@@ -161,7 +170,7 @@ img.step {
     height: 45px; /* Slider handle height */
     border-radius: 50%;
     background: #FFFFFF; /* Green background */
-    border-color: #34D2E6;
+    /* border-color: #34D2E6; */
     border-width: 2px;
     cursor: pointer; /* Cursor on hover */
 }
@@ -170,6 +179,8 @@ img.step {
     width: 25px; /* Set a specific slider handle width */
     height: 25px; /* Slider handle height */
     background: #FFFFFF; /* Green background */
+    border-style: solid;
+    border-color: #34D2E6;
     cursor: pointer; /* Cursor on hover */
 }
 
@@ -198,6 +209,10 @@ img.step {
   box-shadow: none;
 }
 
+.buttongoal {
+  margin-top: .5em;
+}
+
 .bar {
   width: 20%;
   background-color: #34D2E6;
@@ -208,7 +223,11 @@ img.step {
   margin-bottom: 3%;
 }
 
-.container{padding:30px;margin:30px 0;}
+.bargoal {
+  margin-top: 0%;
+}
+
+.container{padding:5px;margin:5px 0;}
 
 /* Radio group */
 .segmented {
@@ -254,6 +273,6 @@ img.step {
 }
 
 #calculatedamt {
-  font-size: 30px;
+  font-size: 2em;
   font-weight: bold;
 }
