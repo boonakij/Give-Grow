@@ -25,11 +25,11 @@ include('includes/init.php');
   <?php
   if (!$current_user) {
     ?>
-    <form action="index.php" method="post">
-      <label for = "name" class = "title"> First Name </label>
-      <input type="text" name="name" placeholder="Name" required>
-      <label for = "email" class = "title"> What's you email? </label>
-      <input type="text" name="email" placeholder="Email" required>
+    <form action="index.php" method="post">>
+      <label for = "username" class = "title"> Choose a username. </label>
+      <input type="text" name="username" placeholder="Username" required>
+      <label for = "password" class = "title"> Choose a password. </label>
+      <input type="password" name="password" placeholder="Password" required>
       <input type="submit" name="create" value="Get started">
     </form>
     <?php
