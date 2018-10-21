@@ -1,6 +1,14 @@
 <?php
 ini_set('error_reporting', E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED);
 include('includes/init.php');
+
+session_start();
+
+if ( $_POST['create'] ) {
+    $amt = filter_input(INPUT_POST, 'slider');
+    create_account($_SESSION['username'], $_SESSION['password'], $_SESSION['email'], $_SESSION['name'], $amt);
+    header('Location: dashboard.php');
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,8 +16,8 @@ include('includes/init.php');
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
   <link rel="stylesheet" type="text/css" href="styles/jquery-ui.min.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
   <script src="scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
   <script src="scripts/jquery-ui.min.js" type="text/javascript"></script>
   <script src="scripts/activity.js" type="text/javascript"></script>
@@ -35,6 +43,12 @@ include('includes/init.php');
     ?>
     <form action="index.php" method="post">
       <label for = "income" class = "title"> What's your estimated income?</label>
+      <?php
+      echo $_SESSION['name'];
+      echo $_SESSION['username'];
+      echo $_SESSION['password'];
+      echo $_SESSION['email'];
+      ?>
       <input type="number" name="income" placeholder="Income" required id = "income">
     </form>
     <?php
@@ -47,14 +61,14 @@ include('includes/init.php');
     <?php
   }
   ?>
-  <div class="slidecontainer">
-  <input type="range" min="1" max="20" value="10" class="slider" id="slider">
-  <p>Percentage: <div id="sliderAmount"></div></p>
-  </div>
+  <form class="slidecontainer" method="post">
+    <input type="range" min="1" max="20" value="10" class="slider" name="slider" id="slider">
+    <p>Percentage: <div id="sliderAmount"></div></p>
 
-<p> That's </p>
-<div id = "calculatedamt"> </div>
-<p> each day! </p>
-  <p> 1 - <strong> 2 </strong></p>
+    <p> That's </p>
+    <div id = "calculatedamt"> </div>
+    <p> each day! </p>
+    <input type="submit" name="create" value="signup" id="logout-btn">
+  </form>
 </body>
 </html>

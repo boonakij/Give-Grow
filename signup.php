@@ -2,9 +2,11 @@
 ini_set('error_reporting', E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED);
 include('includes/init.php');
 
-if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
-    $name = filter_input(INPUT_POST, 'username');
-    $email = filter_input(INPUT_POST, 'password');
+session_start();
+
+if ( $_POST['signup'] ) {
+    $username = filter_input(INPUT_POST, 'username');
+    $password = filter_input(INPUT_POST, 'password');
     $_SESSION["username"] = $username;
     $_SESSION['password'] = $password;
     header('Location: goal.php');
@@ -41,7 +43,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
         <input type="text" name="username" placeholder="EzCornell" required>
         <label for = "password" class = "title"> Choose a Password </label>
         <input type="password" name="password" placeholder="anyPerson" required>
-        <input type="submit" name="create" value="Next" class = "button">
+        <input type="submit" name="signup" value="Next" class = "button">
       </form>
       <?php
     }

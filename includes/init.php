@@ -103,7 +103,7 @@ function log_in($username, $password) {
     store_error("Incorrect username or password");
   }
 }
-function create_account($username, $password, $email) {
+function create_account($username, $password, $email, $name, $dailyDonation) {
   global $current_user;
   global $db;
   $hashed_password = password_hash($password, PASSWORD_DEFAULT);
@@ -113,14 +113,24 @@ function create_account($username, $password, $email) {
             );
   $results = exec_sql_query($db, $sql, $params)->fetchAll();
   if (count($results) == 0) {
-    $sql = "INSERT INTO users (username, password, email, session) VALUES (:username, :password, :email, NULL)";
+    $sql = "INSERT INTO users (username, password, email, session, name) VALUES (:username, :password, :email, NULL, :name)";
     $params = array(
                 ':username' => $username,
                 ':password' => $hashed_password,
-                ':email' => $email
+                ':email' => $email,
+                ':name' => $name
               );
     $results = exec_sql_query($db, $sql, $params);
     log_in($username, $password);
+    $day_current = new DateTime();
+    $sql = "INSERT INTO users_finance (user_id, daily_donation_increment, donation_fund, date_last_incremented) VALUES (:user_id, :daily_donation_increment, :donation_fund, :date_last_incremented)";
+    $params = array(
+                ':user_id' => get_user_id(),
+                ':daily_donation_increment' => $dailyDonation,
+                ':donation_fund' => $dailyDonation,
+                ':date_last_incremented' => $day_current->format('Y-m-d')
+              );
+    $results = exec_sql_query($db, $sql, $params);
   }
 }
 // log out the user
@@ -192,11 +202,11 @@ if (isset($_POST['logout'])) {
   log_out();
 }
 
-if (isset($_POST['create'])) {
-  $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
-  $username = trim($username);
-  $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
-  $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
-  create_account($username, $password, $email);
-}
+// if (isset($_POST['create'])) {
+//   $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+//   $username = trim($username);
+//   $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+//   $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
+//   create_account($username, $password, $email);
+// }
 ?>
