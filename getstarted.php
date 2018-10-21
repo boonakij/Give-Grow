@@ -1,6 +1,16 @@
 <?php
 ini_set('error_reporting', E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED);
 include('includes/init.php');
+
+session_start();
+
+if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
+    $name = filter_input(INPUT_POST, 'name');
+    $email = filter_input(INPUT_POST, 'email');
+    $_SESSION["name"] = $name;
+    $_SESSION['email'] = $email;
+    header('Location: signup.php');
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,7 +38,7 @@ include('includes/init.php');
     <?php
     if (!$current_user) {
       ?>
-      <form action="signup.php" method="post">
+      <form action="getstarted.php" method="post">
         <label for = "name" class = "title"> First Name </label>
         <input type="text" name="name" placeholder="Name" required>
         <label for = "email" class = "title"> Email </label>

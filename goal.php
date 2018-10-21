@@ -16,37 +16,26 @@ include('includes/init.php');
   <script src="scripts/calculatedamt.js" type="text/javascript"></script>
   <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 
-  <title>GiveGrow- Goal</title>
+  <title>Share Here- Bank Account</title>
 </head>
 
-<body class = "goal">
-  <img src = "images/step3.png" alt = "Step 3" class = "step"/>
+<body>
 
-  <h1 class = "step"> Set a Charitable Giving Goal </h1>
+  <h1> 2. Set a Charitable Giving Goal </h1>
 
-  <div class = "bar bargoal"></div>
-    <div class = "information">
-
-  <!-- <div class = "selectbar">
-    <label for="annual" class = "option" id = "annuallabel">Annual</label>
-    <input type="radio" id="annual" name="annual">
-    <label for="weekly" class = "option" id = "weeklylabel">Weekly</label>
-    <input type="radio" id="weekly" name="weekly">
-  </div> -->
-
-  <div class="container">
-  <div class="segmented">
-    <label for="annual" class = "option checked" id = "annuallabel"><input type="radio" name="segmented" id = "annual"/> Annual</label>
-    <label for="weekly" class = "option" id = "weeklylabel"><input type="radio" name="segmented" id = "weekly"/> Weekly</label>
+  <div class = "selectbar">
+  <label for="annual" class = "option" id = "annuallabel">Annual</label>
+  <input type="radio" id="annual" name="annual">
+  <label for="weekly" class = "option" id = "weeklylabel">Weekly</label>
+  <input type="radio" id="weekly" name="weekly">
   </div>
-</div>
 
   <?php
   if (!$current_user) {
     ?>
-    <form action="dashboard.php" method="post">
-      <label for = "income" class = "title"> Income </label>
-      <input type="number" name="income" placeholder="Income" required id = "income" value="0">
+    <form action="index.php" method="post">
+      <label for = "income" class = "title"> What's your estimated income?</label>
+      <input type="number" name="income" placeholder="Income" required id = "income">
     </form>
     <?php
   }
@@ -58,19 +47,14 @@ include('includes/init.php');
     <?php
   }
   ?>
-  </div>
-  <p> What percentage of your income would you like to set <br/> aside for charitable giving? </p>
   <div class="slidecontainer">
-    <input type="range" min="1" max="20" value="10" step = ".01" class="slider" id="slider">
-    <p class = "slideramt"><div id="sliderAmount"></div></p>
+  <input type="range" min="1" max="20" value="10" class="slider" id="slider">
+  <p>Percentage: <div id="sliderAmount"></div></p>
   </div>
-  <p> That's </p>
-  <div id = "calculatedamt">$0</div>
-  <p> each day! </p>
 
-  <a href = "dashboard.php" class = "button buttongoal"> All Set! </a>
-
-  <img src = "images/boi4.png" alt = "succulent" class = "goal"/>
-
+<p> That's </p>
+<div id = "calculatedamt"> </div>
+<p> each day! </p>
+  <p> 1 - <strong> 2 </strong></p>
 </body>
 </html>

@@ -59,7 +59,7 @@ h1.step {
 body.welcome, body.getstarted, body.signup, body.goal{
   margin: 0;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .information {

@@ -1,6 +1,14 @@
 <?php
 ini_set('error_reporting', E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED);
 include('includes/init.php');
+
+if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
+    $name = filter_input(INPUT_POST, 'username');
+    $email = filter_input(INPUT_POST, 'password');
+    $_SESSION["username"] = $username;
+    $_SESSION['password'] = $password;
+    header('Location: goal.php');
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,7 +36,7 @@ include('includes/init.php');
     <?php
     if (!$current_user) {
       ?>
-      <form action="goal.php" method="post">>
+      <form action="signup.php" method="post">>
         <label for = "username" class = "title"> Choose a Username </label>
         <input type="text" name="username" placeholder="Username" required>
         <label for = "password" class = "title"> Choose a Password </label>
