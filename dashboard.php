@@ -70,8 +70,9 @@ include('includes/init.php');
 </div>
 
 <div id="offerings-container">
+  <a id="offerings-back-arrow" href="dashboard.php">&#x2039; Back</a>
   <div id="category-title-container">
-    Aid
+    <div id="category-title-container-inner">Aid</div>
   </div>
   <div id="offerings-header">
     Donate $<input id="offerings-money-input" type="number" min="0.00" max="10000.00" step="0.01" /> to: <div id="offerings-update-btn">Update</div>
