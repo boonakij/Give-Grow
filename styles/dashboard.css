@@ -1,0 +1,132 @@
+html, body, .viewport {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+#overview-container {
+  position: relative;
+  flex: 1;
+  width: 75%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  background-color: yellow;
+  min-height: 100px;
+}
+
+#budget-container {
+  position: relative;
+  flex: 1;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+}
+
+#data-container {
+  position: relative;
+  flex: 1;
+  background-color: blue;
+}
+
+#history-container {
+  position: relative;
+  flex: 1;
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+}
+
+#budget-desc {
+  position: relative;
+  text-align: center;
+  font-size: 36px;
+  height: 70px;
+  line-height: 70px;
+}
+
+#budget-amt {
+  position: relative;
+  text-align: center;
+  font-size: 36px;
+  flex: 5;
+}
+
+#added-amt {
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  flex: 5;
+  height: 70px;
+  line-height: 70px;
+}
+
+#history-desc {
+  position: relative;
+  text-align: center;
+  font-size: 36px;
+  height: 70px;
+  line-height: 70px;
+}
+
+#history-feed {
+  position: relative;
+  flex: 5;
+  background-color: gray;
+}
+
+#give-container {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: pink;
+}
+
+/* legend */
+.legend {
+  font-size: 14px;
+}
+rect {
+  cursor: pointer;
+  stroke-width: 2;
+}
+rect.disabled {
+  fill: transparent !important;
+}
+
+/* chart */
+#chart {
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  width: 300px;
+}
+
+/* tooltip */
+.tooltip {
+  background: #eee;
+  box-shadow: 0 0 5px #999999;
+  color: #333;
+  display: none;
+  font-size: 18px;
+  left: 130px;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  top: 95px;
+  width: 80px;
+  z-index: 10;
+}
+
+.vertically-centered {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
