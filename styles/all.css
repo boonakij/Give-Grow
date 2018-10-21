@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Montserrat/Montserrat-Regular.ttf);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Roboto/Roboto-Regular.ttf);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 html, body, div, span, h1, h2, h3, p,
 a, em, img, q, strong,
 u, i, center, ol, ul, li,
@@ -7,7 +23,7 @@ footer, header, menu, nav, section {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Roboto';
 	vertical-align: baseline;
 }
 
@@ -17,7 +33,7 @@ ol, ul {
 
 
 body, input, textarea, select {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Roboto;
 	line-height: 1.85em;
 	color: #000000;
 	font-weight: 400;
@@ -28,7 +44,6 @@ body, input, textarea, select {
 }
 
 a {
-	color: #FE5F40;
 	text-decoration: none;
 }
 
@@ -58,10 +73,6 @@ label.option {
 input[type="radio"] {
     display:none;
 }
-
-/* input[type="radio"]:checked + label {
-    background-color:  #d3d3d3;
-} */
 
 .slidecontainer {
     width: 75%; /* Width of the outside container */
@@ -106,5 +117,20 @@ input[type="radio"] {
 }
 
 .selected {
-  background-color:  #d3d3d3;
+  background-color:  #34D2E6;
+}
+
+.button {
+  font-size: 20px;
+  display: block;
+  width: 300px;
+  margin: auto;
+  margin-bottom: 1em;
+  text-align: center;
+  background-color: #34D2E6;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
 }

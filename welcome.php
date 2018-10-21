@@ -1,6 +1,8 @@
 <?php
 ini_set('error_reporting', E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED);
+// ini_set("allow_url_fopen", 1);
 include('includes/init.php');
+// echo phpInfo();
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,22 +17,22 @@ include('includes/init.php');
   <script src="scripts/activity.js" type="text/javascript"></script>
   <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 
-  <title>Share Here- Sign Up</title>
+  <title>Share Here- Welcome</title>
 </head>
 
 <body>
 
-  <h1> Set Your Login Details </h1>
+  <h1> Welcome to GiveGrow </h1>
 
   <?php
   if (!$current_user) {
     ?>
     <form action="index.php" method="post">
-      <label for = "name" class = "title"> First Name </label>
-      <input type="text" name="name" placeholder="Name" required>
-      <label for = "email" class = "title"> What's you email? </label>
-      <input type="text" name="email" placeholder="Email" required>
-      <input type="submit" name="create" value="Get started">
+      <label for = "username" class = "title"> Username </label>
+      <input type="text" name="username" placeholder="Username" required>
+      <label for = "password" ckass = "title"> Password </label>
+      <input type="password" name="password" placeholder="Password" required>
+      <input type="submit" name="login" value="Log in">
     </form>
     <?php
   }
@@ -42,7 +44,7 @@ include('includes/init.php');
     <?php
   }
   ?>
-  <a href="goal.php"> Next </a>
-  <p> <strong> 1 </strong> - 2 </p>
+  <a href = "dashboard" class = "button"> Log In </a>
+  <p> Don't have an account? Click <a href="getstarted.php"> here </a> to sign up now! </p>
 </body>
 </html>

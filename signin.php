@@ -17,21 +17,20 @@ include('includes/init.php');
   <script src="scripts/activity.js" type="text/javascript"></script>
   <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 
-  <title>Share Here- Sign In</title>
+  <title>Share Here- Welcome</title>
 </head>
 
 <body>
 
-  <h1> ShareEarn </h1>
-  <p class = "slogan"> Envision what you can do for a better future for anyone. </p>
+  <h1> Welcome to GiveGrow </h1>
 
   <?php
   if (!$current_user) {
     ?>
     <form action="index.php" method="post">
-      <label for = "username" class = "title"> Username: </label>
+      <label for = "username" class = "title"> Username </label>
       <input type="text" name="username" placeholder="Username" required>
-      <label for = "password" ckass = "title"> Password: </label>
+      <label for = "password" ckass = "title"> Password </label>
       <input type="password" name="password" placeholder="Password" required>
       <input type="submit" name="login" value="Log in">
     </form>
@@ -45,6 +44,7 @@ include('includes/init.php');
     <?php
   }
   ?>
-  <p> Don't have an account? Click <a href="signup.php"> here </a> to sign up now! </p>
+  <a href = "dashboard" class = "button"> Log In </a>
+  <p> Don't have an account? Click <a href="welcome.php"> here </a> to sign up now! </p>
 </body>
 </html>
