@@ -1,6 +1,8 @@
 <?php
 ini_set('error_reporting', E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED);
+// ini_set("allow_url_fopen", 1);
 include('includes/init.php');
+// echo phpInfo();
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,22 +17,23 @@ include('includes/init.php');
   <script src="scripts/activity.js" type="text/javascript"></script>
   <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 
-  <title>Share Here- Sign Up</title>
+  <title>Share Here- Sign In</title>
 </head>
 
 <body>
 
-  <h1> Set Your Login Details </h1>
+  <h1> ShareEarn </h1>
+  <p class = "slogan"> Envision what you can do for a better future for anyone. </p>
 
   <?php
   if (!$current_user) {
     ?>
-    <form action="index.php" method="post">>
-      <label for = "username" class = "title"> Choose a username. </label>
+    <form action="index.php" method="post">
+      <label for = "username" class = "title"> Username: </label>
       <input type="text" name="username" placeholder="Username" required>
-      <label for = "password" class = "title"> Choose a password. </label>
+      <label for = "password" ckass = "title"> Password: </label>
       <input type="password" name="password" placeholder="Password" required>
-      <input type="submit" name="create" value="Get started">
+      <input type="submit" name="login" value="Log in">
     </form>
     <?php
   }
@@ -42,7 +45,6 @@ include('includes/init.php');
     <?php
   }
   ?>
-  <a href="goal.php"> Next </a>
-  <p> <strong> 1 </strong> - 2 </p>
+  <p> Don't have an account? Click <a href="signup.php"> here </a> to sign up now! </p>
 </body>
 </html>

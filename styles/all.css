@@ -1,38 +1,39 @@
-<<<<<<< HEAD
-body {
-  background-color: #b6ffff;
-  background-image:
-  linear-gradient(
-    #26a69a, #e0f7fa
-    );
+html, body, div, span, h1, h2, h3, p,
+a, em, img, q, strong,
+u, i, center, ol, ul, li,
+article, embed, figure, figcaption,
+footer, header, menu, nav, section {
+	margin:0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	vertical-align: baseline;
 }
 
-.circle {
-    width: 35%;
-    height:0;
-    position:absolute;
-    right: 32.5%;
-    padding-bottom: 35%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    background: #81d4fa;
+ol, ul {
+	list-style: none;
 }
 
-#title-text{
-  color: #26c6da;
-  font-family: sans-serif;
+
+body, input, textarea, select {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.85em;
+	color: #000000;
+	font-weight: 400;
+	font-size: 12pt;
+  letter-spacing: 0.028em;
+	line-height: 1.70;
+  text-align: center;
 }
 
-button {
-  border-radius: 50px;
+a {
+	color: #FE5F40;
+	text-decoration: none;
 }
 
-.succ {
-  height: 40%;
-  width: 40%;
-=======
 h1 {
+  font-size: 3em;
   text-align: center;
 }
 
@@ -106,5 +107,4 @@ input[type="radio"] {
 
 .selected {
   background-color:  #d3d3d3;
->>>>>>> 974668058c4abac89d1f7708802cef39a8f34d09
 }
