@@ -37,7 +37,7 @@ body, input, textarea, select {
 	line-height: 1.85em;
 	color: #000000;
 	font-weight: 400;
-	font-size: 12pt;
+	font-size: 16pt;
   letter-spacing: 0.028em;
 	line-height: 1.70;
   text-align: center;
@@ -48,8 +48,26 @@ a {
 }
 
 h1 {
-  font-size: 3em;
+  padding-top: 1em;
+  font-size: 4.5em;
   text-align: center;
+}
+
+h1.step {
+  padding-top: .5em;
+}
+
+body.welcome, body.getstarted, body.signup{
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.information {
+  text-align: left;
+  display: block;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .selectbar {
@@ -74,8 +92,46 @@ input[type="radio"] {
     display:none;
 }
 
+input {
+  width: 100%;
+  margin-bottom: 3%;
+}
+
+img.welcome {
+  opacity: .5;
+  position: absolute;
+  left: 450px;
+  top: 30px;
+  width: 110%;
+  z-index: -1;
+}
+
+img.getstarted {
+  opacity: .5;
+  position: absolute;
+  left: 450px;
+  top: 30px;
+  width: 100%;
+  z-index: -1;
+}
+
+
+img.signup {
+  opacity: .5;
+  position: absolute;
+  left: 475px;
+  top: -100px;
+  width: 115%;
+  z-index: -1;
+}
+
+img.step {
+  padding-top: 3em;
+}
+
 .slidecontainer {
-    width: 75%; /* Width of the outside container */
+    width: 70%; /* Width of the outside container */
+    margin: 0 auto;
 }
 
 /* The slider itself */
@@ -83,9 +139,9 @@ input[type="radio"] {
     -webkit-appearance: none;  /* Override default CSS styles */
     appearance: none;
     width: 100%; /* Full-width */
-    height: 15px; /* Specified height */
-    border-radius: 5px;
-    background: #d3d3d3; /* Grey background */
+    height: 25px; /* Specified height */
+    border-radius: 15px;
+    background: #34D2E6; /* Grey background */
     outline: none; /* Remove outline */
     opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
     -webkit-transition: .2s; /* 0.2 seconds transition on hover */
@@ -102,35 +158,103 @@ input[type="radio"] {
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
     appearance: none;
-    width: 25px; /* Set a specific slider handle width */
-    height: 25px; /* Slider handle height */
+    width: 45px; /* Set a specific slider handle width */
+    height: 45px; /* Slider handle height */
     border-radius: 50%;
-    background: #4CAF50; /* Green background */
+    background: #FFFFFF; /* Green background */
+    border-color: #34D2E6;
+    border-width: 2px;
     cursor: pointer; /* Cursor on hover */
 }
 
 .slider::-moz-range-thumb {
     width: 25px; /* Set a specific slider handle width */
     height: 25px; /* Slider handle height */
-    background: #4CAF50; /* Green background */
+    background: #FFFFFF; /* Green background */
     cursor: pointer; /* Cursor on hover */
 }
 
-.selected {
-  background-color:  #34D2E6;
+.slideramt {
+  display: inline;
 }
 
 .button {
   font-size: 20px;
   display: block;
-  width: 300px;
+  width: 25%;
   margin: auto;
   margin-bottom: 1em;
+  padding-top: .5em;
+  padding-bottom: .5em;
   text-align: center;
   background-color: #34D2E6;
   color: white;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 30px;
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border: 0;
+  box-shadow: none;
+}
+
+.bar {
+  width: 20%;
+  background-color: #34D2E6;
+  height: 1em;
+  text-align: center;
+  display: inline-block;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.container{padding:30px;margin:30px 0;}
+
+/* Radio group */
+.segmented {
+    display:flex;
+    flex-flow:row wrap;
+    box-sizing:border-box;
+    font-family:'Montserrat';
+    font-size:90%;
+    text-align:center;
+}
+.segmented label {
+    display:block;
+    flex:1;
+    box-sizing:border-box;
+    border:1px solid #34D2E6;
+    border-right:none;
+    color:#34D2E6;
+    margin:0;
+    padding:.4em;
+    cursor: pointer;
+    user-select:none;
+    -webkit-user-select:none;
+    text-transform: uppercase;
+}
+.segmented label.checked {
+    background:#34D2E6;
+    color:#FFFFFF;
+}
+
+.segmented label:first-child {
+    border-radius:1.2em 0 0 1.2em;
+    border-right:0;
+}
+.segmented label:last-child {
+    border-radius:0 1.2em 1.2em 0;
+    border-right:1px solid;
+}
+.segmented input[type="radio"] {
+    appearance:none;
+    -webkit-appearance:none;
+    margin:0;
+    position: absolute;
+}
+
+#calculatedamt {
+  font-size: 30px;
+  font-weight: bold;
 }

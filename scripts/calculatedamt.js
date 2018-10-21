@@ -1,32 +1,32 @@
 $(document).ready(function() {
   var output = document.getElementById("sliderAmount");
-  output.innerHTML = slider.value/5;
+  output.innerHTML = slider.value+'%';
   var income = document.getElementById("income");
   var days=365;
 
   slider.oninput = function() {
     var slider = document.getElementById("slider");
-    output.innerHTML = this.value/5;
+    output.innerHTML = this.value+'%';
     var calculatedamt = document.getElementById("calculatedamt")
-    calculatedamt.innerHTML = Math.round(income.value*this.value/5/days)/100;
+    calculatedamt.innerHTML = '$'+Math.round(income.value*this.value/days)/100;
   }
 
   income.oninput = function() {
     income = document.getElementById("income");
     var calculatedamt = document.getElementById("calculatedamt")
-    calculatedamt.innerHTML = Math.round(this.value*slider.value/5/days)/100;
+    calculatedamt.innerHTML = '$'+Math.round(this.value*slider.value/days)/100;
   }
 
   $("#annual").click(function(){
-    $("#annuallabel").addClass("selected");
-    $("#weeklylabel").removeClass("selected");
+    $("#annuallabel").addClass("checked");
+    $("#weeklylabel").removeClass("checked");
     days = 365;
   });
 
 
   $("#weekly").click(function(){
-    $("#annuallabel").removeClass("selected");
-    $("#weeklylabel").addClass("selected");
+    $("#annuallabel").removeClass("checked");
+    $("#weeklylabel").addClass("checked");
     days = 7;
   });
 
@@ -43,6 +43,5 @@ $(document).ready(function() {
     var calculatedamt = document.getElementById("calculatedamt")
     calculatedamt.innerHTML = Math.round(income.value*slider.value/days)/100;
   }
-
 
 });
