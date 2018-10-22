@@ -59,6 +59,7 @@ h1 {
 
 h1.step {
   padding-top: .5em;
+  font-size: 3em;
 }
 
 body.welcome, body.getstarted, body.signup, body.goal{
