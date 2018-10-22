@@ -30,7 +30,6 @@ if ( $_POST['create'] ) {
 <body class="goal">
   <img src = "images/step3.png" alt = "Step 3" class = "step"/>
   <h1 class="step"> 2. Set a Charitable Giving Goal </h1>
-
   <div class="bar bargoal"></div>
   <div class="information">
 
@@ -70,7 +69,7 @@ if ( $_POST['create'] ) {
     <input type="submit" name="create" value="signup" id="logout-btn">
   </form> -->
   <form class="slidecontainer" method="post">
-    <input type="range" min="1" max="20" value="10" step = .01 class="slider" id="slider">
+    <input type="range" min="1" max="20" value="10" step = .01 name = "slider" class="slider" id="slider">
   <p>Percentage: <div id="sliderAmount"></div></p>
 
   <p> That's </p>
