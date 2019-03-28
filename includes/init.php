@@ -202,6 +202,7 @@ if (isset($_POST['logout'])) {
   log_out();
 }
 
+
 // if (isset($_POST['create'])) {
 //   $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
 //   $username = trim($username);

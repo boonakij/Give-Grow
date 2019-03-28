@@ -27,6 +27,9 @@ include('includes/init.php');
 <body>
 
 <?php
+  if (!$current_user) {
+    header("Location: welcome.php");
+  }
   // Increment donation fund
   $sql = "SELECT * FROM users_finance WHERE user_id = :user_id;";
   $params = array(

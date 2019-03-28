@@ -270,7 +270,7 @@ $(document).ready(function() {
       type: "POST",
       data: {'offeringId': offeringId, 'money': money},
       success: function(html) {
-        alert('purchased');
+        alert('donated');
         // if (html) {
         //   $('body').css("overflow", "auto");
         //   $('#offerings-collection').html(html);
