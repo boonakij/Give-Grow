@@ -69,7 +69,7 @@ if ( $_POST['create'] ) {
     <input type="submit" name="create" value="signup" id="logout-btn">
   </form> -->
   <form class="slidecontainer" method="post">
-    <input type="range" min="1" max="20" value="10" name="slider" class="slider" id="slider">
+    <input type="range" min="1" max="20" value="10" step = .01 name = "slider" class="slider" id="slider">
   <p>Percentage: <div id="sliderAmount"></div></p>
 
   <p> That's </p>
